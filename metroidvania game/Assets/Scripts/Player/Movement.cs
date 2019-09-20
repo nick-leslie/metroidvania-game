@@ -18,9 +18,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerInput = Input.GetAxis("Horizontal");
+
+    }
+    private void FixedUpdate()
+    {
+        playerInput = Input.GetAxisRaw("Horizontal");
         movespeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkspeed;
 
-        rb.velocity = new Vector2 (Input.GetAxisRaw("Horizontal") * movespeed* Time.deltaTime,rb.velocity.y);
+        rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * movespeed * Time.deltaTime, rb.velocity.y);
     }
 }
