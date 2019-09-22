@@ -5,8 +5,13 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     private GameObject player;
-    private Vector3 angle= new Vector3(0,0,360);
-    private bool rotatite = false;
+    [SerializeField]
+    private float radis;
+    [SerializeField]
+    private LayerMask whattohit;
+    [SerializeField]
+    private float outdegree;
+    private Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,22 +21,15 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position;
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            rotatite = true;
-        }
-        if(rotatite==true)
-        {
-            if (transform.rotation.z > 0)
-            {
-                transform.RotateAround(player.transform.position, angle, 90 * Time.time);
-            }
-            else
-            {
-                rotatite = false;
-
-            }
-        }
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+        Vector2 direPointed = new Vector2(x, y);
+         pos = new Vector3((player.transform.position.x) * direPointed.x, (player.transform.position.y) * direPointed.y, 0);
+        Physics2D.OverlapCircleAll(pos, radis, whattohit);
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(pos, radis);
     }
 }

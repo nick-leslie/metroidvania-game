@@ -5,7 +5,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     protected float playerInput;
-    [SerializeField] private float sprintSpeed;
+    [SerializeField] private float sprintSpeedMax;
+    [SerializeField]private float sprintIncreceOvertime;
+    private float sprintSpeed = 0;
     [SerializeField] private float walkspeed;
     private float movespeed;
     private Rigidbody2D rb;
@@ -13,6 +15,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        sprintSpeed = walkspeed;
     }
 
     // Update is called once per frame
@@ -23,8 +26,15 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         playerInput = Input.GetAxisRaw("Horizontal");
-        movespeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkspeed;
-
+        movespeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed+=sprintIncreceOvertime*Time.deltaTime : walkspeed;
+         if(sprintSpeed>sprintSpeedMax)
+        {
+            sprintSpeed = sprintSpeedMax;
+        }
+         if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            sprintSpeed = walkspeed;
+        }
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * movespeed * Time.deltaTime, rb.velocity.y);
     }
 }

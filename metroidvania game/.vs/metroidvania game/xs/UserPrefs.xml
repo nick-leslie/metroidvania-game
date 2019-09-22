@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{E00A1E57-BA37-A34D-7A6C-0338048962ED}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Attack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/respawn.cs">
     <Files>
       <File FileName="Assets/Scripts/Player/Movement.cs" Line="28" Column="111" />
       <File FileName="Assets/Scripts/Player/Jump.cs" Line="38" Column="13" />
       <File FileName="Assets/Scripts/Player/CammraShake.cs" Line="47" Column="68" />
       <File FileName="Assets/Scripts/Enviorment/jumpStar.cs" Line="21" Column="10" />
-      <File FileName="Assets/Scripts/Player/Attack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/Attack.cs" Line="27" Column="103" />
+      <File FileName="Assets/respawn.cs" Line="8" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
