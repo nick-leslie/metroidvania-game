@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{E00A1E57-BA37-A34D-7A6C-0338048962ED}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/respawn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/heal.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/Movement.cs" Line="28" Column="111" />
+      <File FileName="Assets/Scripts/Player/Movement.cs" Line="36" Column="37" />
       <File FileName="Assets/Scripts/Player/Jump.cs" Line="38" Column="13" />
       <File FileName="Assets/Scripts/Player/CammraShake.cs" Line="47" Column="68" />
-      <File FileName="Assets/Scripts/Enviorment/jumpStar.cs" Line="21" Column="10" />
+      <File FileName="Assets/Scripts/Enviorment/jumpStar.cs" Line="29" Column="65" />
       <File FileName="Assets/Scripts/Player/Attack.cs" Line="27" Column="103" />
-      <File FileName="Assets/respawn.cs" Line="8" Column="10" />
+      <File FileName="Assets/respawn.cs" Line="23" Column="39" />
+      <File FileName="Assets/cammraControler.cs" Line="17" Column="82" />
+      <File FileName="Assets/circalShrinking.cs" Line="19" Column="153" />
+      <File FileName="Assets/heal.cs" Line="7" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
