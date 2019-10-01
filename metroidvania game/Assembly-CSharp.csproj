@@ -67,9 +67,11 @@
     <Compile Include="Assets\Scripts\Enviorment\jumpStar.cs" />
     <Compile Include="Assets\Scripts\Player\Attack.cs" />
     <Compile Include="Assets\Scripts\Player\CammraShake.cs" />
-    <Compile Include="Assets\Scripts\Player\heal.cs" />
-    <Compile Include="Assets\Scripts\Player\Jump.cs" />
-    <Compile Include="Assets\Scripts\Player\Movement.cs" />
+    <Compile Include="Assets\Scripts\Player\health\heal.cs" />
+    <Compile Include="Assets\Scripts\Player\health\HealthMainiger.cs" />
+    <Compile Include="Assets\Scripts\Player\health\HealthUI.cs" />
+    <Compile Include="Assets\Scripts\Player\Movement\Jump.cs" />
+    <Compile Include="Assets\Scripts\Player\Movement\Movement.cs" />
     <Compile Include="Assets\Scripts\Player\respawn.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

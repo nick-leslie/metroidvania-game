@@ -297,6 +297,7 @@
 "Assets/Scripts/Player/Attack.cs"
 "Assets/Scripts/Player/CammraShake.cs"
 "Assets/Scripts/Player/heal.cs"
+"Assets/Scripts/Player/HealthMainiger.cs"
 "Assets/Scripts/Player/Jump.cs"
 "Assets/Scripts/Player/Movement.cs"
 "Assets/Scripts/Player/respawn.cs"

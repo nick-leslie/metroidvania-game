@@ -5,22 +5,27 @@ using UnityEngine;
 
 public class respawn : MonoBehaviour
 {
+    [SerializeField]
+    private Transform spawnpos;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) 
         {
-            SceneManager.LoadScene(0);
+            HealthMainiger temphealth = other.GetComponent<HealthMainiger>();
+            if (temphealth.Health>=0)
+            {
+                temphealth.Health -= 1;
+                other.transform.position = new Vector3(spawnpos.position.x,spawnpos.position.y,other.transform.position.z);
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 }

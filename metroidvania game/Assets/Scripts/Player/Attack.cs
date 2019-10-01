@@ -35,9 +35,12 @@ public class Attack : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Collider2D[] enmeystoDamage = Physics2D.OverlapCircleAll(transform.position + (Vector3.up * vertical), radis);
-                    for (int i = 0; i < enmeystoDamage.Length; i++)
-                    {
+                    Collider2D[] enmeystoDamage = Physics2D.OverlapCircleAll(transform.position + (Vector3.up * vertical), radis,whattohit);
+                    if (enmeystoDamage.Length > 0) {
+                        for (int i = 0; i < enmeystoDamage.Length; i++)
+                        {
+                         //todo
+                        }
                         backforce(Vector3.up, vertical);
                         workingTimeBtwAttack = startTimeBtwAttack;
                     }
@@ -47,9 +50,13 @@ public class Attack : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Collider2D[] enmeystoDamage = Physics2D.OverlapCircleAll(transform.position + (Vector3.right * horizontal), radis);
-                    for (int i = 0; i < enmeystoDamage.Length; i++)
+                    Collider2D[] enmeystoDamage = Physics2D.OverlapCircleAll(transform.position + (Vector3.right * horizontal), radis,whattohit);
+                    if (enmeystoDamage.Length > 0)
                     {
+                        for (int i = 0; i < enmeystoDamage.Length; i++)
+                        {
+                            //todo
+                        }
                         backforce(Vector3.right, horizontal);
                         workingTimeBtwAttack = startTimeBtwAttack;
                     }
@@ -61,26 +68,28 @@ public class Attack : MonoBehaviour
             workingTimeBtwAttack -= Time.deltaTime;
         }
     }
+    private void backforce(Vector3 vectorDirection,float type)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, vectorDirection * type, Mathf.Infinity, whattohit);
+        Debug.DrawRay(transform.position, vectorDirection * type,color:Color.blue,radis);
+        if (hit.collider != null)
+        {
+            rb.velocity = Vector3.zero;
+            Vector3 hitpos = new Vector3(hit.point.x, hit.point.y, transform.position.z);
+            Vector2 dire = transform.position - hitpos;
+            rb.AddRelativeForce(dire.normalized * force);
+        }
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         if (vertical != 0)
         {
             Gizmos.DrawWireSphere(transform.position + (Vector3.up * vertical), radis);
-        } else if (horizontal !=0)
+        }
+        else if (horizontal != 0)
         {
             Gizmos.DrawWireSphere(transform.position + (Vector3.right * horizontal), radis);
-        }
-    }
-    private void backforce(Vector3 vectorDirection,float type)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, vectorDirection * type, radis, whattohit);
-        if (hit.collider != null)
-        {
-            rb.velocity = Vector3.zero;
-            Vector3 hitpos = new Vector3(hit.point.x, hit.point.y, transform.position.z);
-            Vector2 dire = transform.position - hitpos;
-            rb.AddForce(dire * force, ForceMode2D.Impulse);
         }
     }
 }

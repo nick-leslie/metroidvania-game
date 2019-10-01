@@ -11,6 +11,7 @@ public class heal : MonoBehaviour
     private RectTransform shrinkingcircalRectTransform;
     private GameObject player;
     private bool healing = false;
+    private HealthMainiger hp;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class heal : MonoBehaviour
         shrinkingcircal.GetComponent<Image>().enabled = false;
         shrinkingcircal.GetComponent<circalShrinking>().enabled = false;
         player = GameObject.FindWithTag("Player");
+        hp = player.GetComponent<HealthMainiger>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class heal : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.F))
             {
-                //todo
+                hp.Health += 1;
                 healingState(healing);
             }
         }
