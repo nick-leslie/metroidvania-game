@@ -16,7 +16,8 @@ public class jumpStar : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Jump>().canJump = false;
+            other.gameObject.GetComponent<Jump>().canJump = true;
+            other.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             StartCoroutine(WaitAsecond());
         }
     }

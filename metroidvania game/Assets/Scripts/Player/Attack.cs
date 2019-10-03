@@ -15,26 +15,29 @@ public class Attack : MonoBehaviour
     private float horizontal;
     private Rigidbody2D rb;
     [SerializeField]
-    private float startTimeBtwAttack;
-    private float workingTimeBtwAttack;
+    private bool canatack=true;
+    [SerializeField]
+    private GameObject slash;
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        workingTimeBtwAttack = startTimeBtwAttack;
     }
 
     // Update is called once per frame
     void Update()
     {
-        vertical = Input.GetAxisRaw("Vertical");
+        //------------------------------------
+        //target finding
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (workingTimeBtwAttack <= 0)
+        vertical = Input.GetAxisRaw("Vertical");
+        if (canatack==true)
         {
             if (vertical != 0)
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    slashdire("ver", vertical);
                     Collider2D[] enmeystoDamage = Physics2D.OverlapCircleAll(transform.position + (Vector3.up * vertical), radis,whattohit);
                     if (enmeystoDamage.Length > 0) {
                         for (int i = 0; i < enmeystoDamage.Length; i++)
@@ -42,7 +45,7 @@ public class Attack : MonoBehaviour
                          //todo
                         }
                         backforce(Vector3.up, vertical);
-                        workingTimeBtwAttack = startTimeBtwAttack;
+                       canatack = false;
                     }
                 }
             }
@@ -50,6 +53,7 @@ public class Attack : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    slashdire("hor", horizontal);
                     Collider2D[] enmeystoDamage = Physics2D.OverlapCircleAll(transform.position + (Vector3.right * horizontal), radis,whattohit);
                     if (enmeystoDamage.Length > 0)
                     {
@@ -58,16 +62,24 @@ public class Attack : MonoBehaviour
                             //todo
                         }
                         backforce(Vector3.right, horizontal);
-                        workingTimeBtwAttack = startTimeBtwAttack;
+                        canatack = false;
                     }
                 }
             }
         }
-        else
+        if (slash.active == true)
         {
-            workingTimeBtwAttack -= Time.deltaTime;
+            StartCoroutine(attackWait());
         }
     }
+    private IEnumerator attackWait()
+    {
+        yield return new WaitUntil(() => slash.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("wait") == true);
+        canatack = true;
+    }
+    /// <summary>
+    /// force in the posidt direction
+    /// </summary>
     private void backforce(Vector3 vectorDirection,float type)
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, vectorDirection * type, Mathf.Infinity, whattohit);
@@ -80,6 +92,66 @@ public class Attack : MonoBehaviour
             rb.AddRelativeForce(dire.normalized * force);
         }
     }
+    //-------------------------------
+    /// <summary>
+    /// sets the dirdection of the slash
+    /// </summary>
+    private void slashdire(string state,float dire)
+    { 
+        if (state == "ver")
+        {
+            if (dire > 0)
+            {
+                slashcode(90);
+            }
+            else if (dire < 0)
+            {
+                slashcode(270);
+            }
+        }
+        else if (state == "hor")
+        {
+            if (dire > 0)
+            {
+                slashcode(0);
+            }
+            else if (dire < 0)
+            {
+                slashcode(180);
+            }
+        }
+
+    }
+    /// <summary>
+    /// exsacutes the slash
+    /// </summary>
+    private void slashcode(float angle) 
+    {
+        if (slash.activeSelf == false)
+        {
+            slash.SetActive(true);
+        }
+        else
+        {
+            slash.GetComponent<Animator>().SetBool("active",true);
+        }
+        slash.transform.rotation = Quaternion.Euler(0, 0, angle);
+        slash.GetComponent<Animator>().SetBool("active", false);
+        StartCoroutine(waitTillAnimDone());
+    }
+    /// <summary>
+    /// Waits  till animation done.
+    /// </summary>
+    private IEnumerator waitTillAnimDone()
+    {
+
+        yield return new WaitUntil(() => slash.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("wait") == true);
+        slash.SetActive(false);
+    }
+ //----------------------------------
+ /// <summary>
+ /// Ons the draw gizmos selected.
+ /// </summary>
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

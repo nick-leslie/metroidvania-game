@@ -1,0 +1,2 @@
+/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
