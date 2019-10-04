@@ -32,11 +32,11 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            if (sprintSpeed > walkspeed)
+            if (movespeed > walkspeed)
             {
                 sprintSpeed -= sprintIncreceOvertime*Time.deltaTime;
             }
-            if(sprintSpeed<walkspeed) 
+            if(movespeed<walkspeed) 
             {
                 sprintSpeed = walkspeed;
             }
