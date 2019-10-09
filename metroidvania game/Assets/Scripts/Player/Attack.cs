@@ -18,6 +18,8 @@ public class Attack : MonoBehaviour
     private bool canatack = true;
     [SerializeField]
     private GameObject slash;
+    [SerializeField]
+    private int dammage;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +69,10 @@ public class Attack : MonoBehaviour
         {
             for (int i = 0; i < enmeystoDamage.Length; i++)
             {
-                //todo
+               if(enmeystoDamage[i].gameObject.GetComponent<AIBrain>() != null)
+                {
+                    enmeystoDamage[i].gameObject.GetComponent<AIBrain>().takeDamage(dammage);
+                }
             }
             backforce(vec, dire);
             canatack = false;
@@ -85,7 +90,6 @@ private void backforce(Vector3 vectorDirection, float type)
         rb.velocity = Vector3.zero;
         Vector3 hitpos = new Vector3(hit.point.x, hit.point.y, transform.position.z);
         Vector2 dire = transform.position - hitpos;
-        Debug.Log(dire);
         rb.AddRelativeForce(dire.normalized * force);
     }
 }
@@ -162,3 +166,4 @@ private void OnDrawGizmosSelected()
     }
 }
 }
+

@@ -9,8 +9,11 @@ public class AIBrain : MonoBehaviour
     private float speed;
     private GameObject player;
     [SerializeField]
+    private int MaxDamage;
     private int damage;
-    protected GameObject Player
+    private HealthMainiger heath;
+    private Color ogcolor;
+    public GameObject Player
     {
         get { return player; }
         set
@@ -21,7 +24,7 @@ public class AIBrain : MonoBehaviour
             }
         }
     }
-    protected float Speed
+    public float Speed
     {
         get { return speed; }
         set
@@ -36,15 +39,43 @@ public class AIBrain : MonoBehaviour
             }
         }
     }
+    public int Damage
+    {
+        get { return damage; }
+        set
+        {
+            if(value<=MaxDamage)
+            {
+                damage = value;
+            }
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        speed = maxSpeed;
+        damage = MaxDamage;
+        heath = gameObject.GetComponent<HealthMainiger>();
+        ogcolor = gameObject.GetComponent<SpriteRenderer>().color;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void takeDamage(int amount)
     {
-        
+        heath.Health -= amount;
+        StartCoroutine(dammag());
+        if(heath.Health<=0)
+        {
+            die();
+        }
+    }
+    public void die() 
+    {
+        Destroy(gameObject);
+    }
+    private IEnumerator dammag()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSecondsRealtime(0.2f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
     }
 }

@@ -19,14 +19,13 @@ public class Jump : MonoBehaviour
     [SerializeField]
     private float maxjumpVelocity;
     public bool betterjump=true;
-
-
     private float gravity;
     private float jumpVelocity;
     [SerializeField]
     private float jumpHeight;
     [SerializeField]
     private float timeToJumpApex;
+    public bool IsGrounded;
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -65,7 +64,12 @@ public class Jump : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameObject.GetComponent<CammraShake>().enabled = true;
+        IsGrounded = true;
         Instantiate(dustPartical, transform.position, transform.rotation);
         canJump = true;
+    }
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        IsGrounded = false;
     }
 }

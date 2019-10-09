@@ -62,12 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FlyingPathfinding.cs" />
+    <Compile Include="Assets\fallRespawnPos.cs" />
+    <Compile Include="Assets\findCamra.cs" />
     <Compile Include="Assets\Scripts\AI\AIBrain.cs" />
     <Compile Include="Assets\Scripts\AI\FLyingPAthfinding.cs" />
     <Compile Include="Assets\Scripts\cammraControler.cs" />
     <Compile Include="Assets\Scripts\circalShrinking.cs" />
     <Compile Include="Assets\Scripts\Enviorment\jumpStar.cs" />
+    <Compile Include="Assets\Scripts\Enviorment\respawn.cs" />
     <Compile Include="Assets\Scripts\lifeTime.cs" />
     <Compile Include="Assets\Scripts\Player\Attack.cs" />
     <Compile Include="Assets\Scripts\Player\CammraShake.cs" />
@@ -76,8 +78,8 @@
     <Compile Include="Assets\Scripts\Player\health\HealthUI.cs" />
     <Compile Include="Assets\Scripts\Player\Movement\Jump.cs" />
     <Compile Include="Assets\Scripts\Player\Movement\Movement.cs" />
-    <Compile Include="Assets\Scripts\Player\respawn.cs" />
-    <Compile Include="Assets\slashDissable.cs" />
+    <Compile Include="Assets\Scripts\sceanStuff\LoadScene.cs" />
+    <Compile Include="Assets\Scripts\sceanStuff\SceneManiger.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
