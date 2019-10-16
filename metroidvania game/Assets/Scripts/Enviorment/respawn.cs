@@ -18,15 +18,8 @@ public class respawn : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             HealthMainiger temphealth = other.GetComponent<HealthMainiger>();
-            if (temphealth.Health>0)
-            {
                 temphealth.Health -= 1;
                 other.transform.position = new Vector3(spawnpos.position.x,spawnpos.position.y,other.transform.position.z);
-            }
-            if(temphealth.Health==0)
-            {
-                SceneManager.LoadScene(0);
-            }
         }
     }
 }

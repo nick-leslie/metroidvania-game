@@ -1,19 +1,35 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AIBrain
     - Attack
     - CammraShake
+    - DamagePlayerOnColition
+    - FLyingPAthfinding
+    - HealthMainiger
+    - HealthUI
     - Jump
+    - LoadScene
     - Movement
+    - SceneManiger
     - cammraControler
     - circalShrinking
+    - fallRespawnPos
+    - findCamra
     - heal
     - jumpStar
+    - lifeTime
     - respawn
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.Graphs.dll:
@@ -37,6 +53,79 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 4
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 576}
+    - Class: 114
+      Script: {instanceID: 9650}
+    - Class: 114
+      Script: {instanceID: 9854}
+    - Class: 114
+      Script: {instanceID: 10256}
+    - Class: 114
+      Script: {instanceID: 10290}
+    - Class: 114
+      Script: {instanceID: 10406}
+    - Class: 114
+      Script: {instanceID: 10478}
+    - Class: 114
+      Script: {instanceID: 10720}
+    - Class: 114
+      Script: {instanceID: 11044}
+    - Class: 114
+      Script: {instanceID: 11114}
+    - Class: 114
+      Script: {instanceID: 11244}
+    - Class: 114
+      Script: {instanceID: 11296}
+    - Class: 114
+      Script: {instanceID: 11490}
+    - Class: 114
+      Script: {instanceID: 11512}
+    - Class: 114
+      Script: {instanceID: 11544}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
+      Script: {instanceID: 0}
+    Assets/Scenes/percistenScean.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
     - Class: 21
@@ -49,11 +138,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 95
+    - Class: 91
       Script: {instanceID: 0}
-    - Class: 96
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -68,23 +159,72 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10220}
     - Class: 114
-      Script: {instanceID: 10256}
-    - Class: 114
-      Script: {instanceID: 10290}
-    - Class: 114
       Script: {instanceID: 10368}
     - Class: 114
       Script: {instanceID: 10406}
     - Class: 114
-      Script: {instanceID: 11072}
+      Script: {instanceID: 10424}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 10676}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 10880}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11084}
     - Class: 114
-      Script: {instanceID: 11494}
+      Script: {instanceID: 11114}
+    - Class: 114
+      Script: {instanceID: 11204}
+    - Class: 114
+      Script: {instanceID: 11244}
+    - Class: 114
+      Script: {instanceID: 11308}
+    - Class: 114
+      Script: {instanceID: 32716}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/testScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9650}
+    - Class: 114
+      Script: {instanceID: 9854}
+    - Class: 114
+      Script: {instanceID: 10478}
+    - Class: 114
+      Script: {instanceID: 10720}
+    - Class: 114
+      Script: {instanceID: 11114}
+    - Class: 114
+      Script: {instanceID: 11512}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -274,7 +414,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: ee697dc757b4b0c15879482526359a67
+      Hash: 4518800320bd4805d9e9f7d70ce7b167
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Jump
@@ -334,6 +474,12 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
+      Hash: 83a660462a6a85e6e7ec403b3fbeca66
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneManiger
+  - hash:
+      serializedVersion: 2
       Hash: 97ace6213ad0f149b0917a4c669c6ca3
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -344,6 +490,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: findCamra
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -374,6 +526,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 8981be3dc0719bf32b17438b04f9559a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthUI
+  - hash:
+      serializedVersion: 2
+      Hash: ed28b01ea864544001f95b5048f39a4c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadScene
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -424,10 +588,22 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: e242050c40ea879d91b8a6e85a2afce8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: fallRespawnPos
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 476f9ee3066c69306678a2de54e61d6d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FLyingPAthfinding
   - hash:
       serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
@@ -460,10 +636,16 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: c2eca0b8ef167c561a2425100087f928
+      Hash: a4b796879cba74dc49a72289423f7c2c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Attack
+  - hash:
+      serializedVersion: 2
+      Hash: 62b78fa879f9cca740330f538611c21a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthMainiger
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -476,6 +658,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DamagePlayerOnColition
+  - hash:
+      serializedVersion: 2
+      Hash: 87f0292b3e32fa3515fc845c4f7656ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: lifeTime
   - hash:
       serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
@@ -550,7 +744,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 89848ee8e7c0ab6c4f21bf279c5cd3c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: respawn
@@ -568,12 +762,32 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 5ee2d5e65e1b38ccfd8b6841dbd814c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AIBrain
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 704dcd31abc789439bc3f3cd10b58c2b
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 9a65634b0f2713c6c2d2dd4d09159a88
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   platform: 2
   scenePathNames:
+  - Assets/Scenes/percistenScean.unity
   - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/testScene.unity
   playerPath: /Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania
     game/unnamed metrodvania alfa 1.app

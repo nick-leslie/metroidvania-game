@@ -16,9 +16,13 @@ public class FLyingPAthfinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(brain.Player.transform.position,transform.position) < disAway)
+        if (brain.Player != null)
         {
-            transform.position = Vector3.MoveTowards(gameObject.transform.position, brain.Player.transform.position, brain.Speed * Time.deltaTime);
+            if (Vector2.Distance(brain.Player.transform.position, transform.position) < disAway)
+            {
+                transform.position = Vector3.MoveTowards(gameObject.transform.position, brain.Player.transform.position, brain.Speed * Time.deltaTime);
+            }
+
         }
     }
 }

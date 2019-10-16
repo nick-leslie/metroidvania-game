@@ -7,6 +7,7 @@ TagManager:
   - heath points
   - Enemy
   - SceneManiger
+  - lastGroundPos
   layers:
   - Default
   - TransparentFX

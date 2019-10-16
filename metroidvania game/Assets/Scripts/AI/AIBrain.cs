@@ -13,6 +13,10 @@ public class AIBrain : MonoBehaviour
     private int damage;
     private HealthMainiger heath;
     private Color ogcolor;
+    [SerializeField]
+    private float knockback;
+    [SerializeField]
+    private float knockbackDuration;
     public GameObject Player
     {
         get { return player; }
@@ -49,6 +53,14 @@ public class AIBrain : MonoBehaviour
                 damage = value;
             }
         }
+    }
+    public float KnockbackDuration
+    {
+        get { return knockbackDuration; }
+    }
+    public float KnockBack
+    {
+        get { return knockback; }
     }
     // Start is called before the first frame update
     void Start()

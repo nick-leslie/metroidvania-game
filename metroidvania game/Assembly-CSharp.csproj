@@ -62,14 +62,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\fallRespawnPos.cs" />
-    <Compile Include="Assets\findCamra.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\AI\AIBrain.cs" />
+    <Compile Include="Assets\Scripts\AI\DamagePlayerOnColition.cs" />
     <Compile Include="Assets\Scripts\AI\FLyingPAthfinding.cs" />
     <Compile Include="Assets\Scripts\cammraControler.cs" />
     <Compile Include="Assets\Scripts\circalShrinking.cs" />
     <Compile Include="Assets\Scripts\Enviorment\jumpStar.cs" />
     <Compile Include="Assets\Scripts\Enviorment\respawn.cs" />
+    <Compile Include="Assets\Scripts\fallRespawnPos.cs" />
+    <Compile Include="Assets\Scripts\findCamra.cs" />
     <Compile Include="Assets\Scripts\lifeTime.cs" />
     <Compile Include="Assets\Scripts\Player\Attack.cs" />
     <Compile Include="Assets\Scripts\Player\CammraShake.cs" />
@@ -80,6 +88,7 @@
     <Compile Include="Assets\Scripts\Player\Movement\Movement.cs" />
     <Compile Include="Assets\Scripts\sceanStuff\LoadScene.cs" />
     <Compile Include="Assets\Scripts\sceanStuff\SceneManiger.cs" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -289,6 +298,9 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>/Applications/Unity/2019.2.0f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/2019.2.0f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
