@@ -12,6 +12,8 @@ public class heal : MonoBehaviour
     private GameObject player;
     private bool healing = false;
     private HealthMainiger hp;
+    [SerializeField]
+    private float shrinkSpeedMod;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +32,25 @@ public class heal : MonoBehaviour
     {
         if(shrinkingcircalRectTransform.sizeDelta.x<=insidecircalRectTransform.sizeDelta.x && shrinkingcircalRectTransform.sizeDelta.y <= insidecircalRectTransform.sizeDelta.y)
         {
+            //heals if ciracl is inside the other one
             if(Input.GetKeyDown(KeyCode.F))
             {
                 hp.Health += 1;
-                healingState(healing);
+                if (hp.Health == hp.maxHeath)
+                {
+                    healingState(healing);
+                }
+                //alows to heal up to max health
+                else
+                {
+                    shrinkingcircalRectTransform.sizeDelta = gameObject.GetComponent<circalShrinking>().startsize;
+                    shrinkingcircal.GetComponent<circalShrinking>().shrickSpeed += shrinkSpeedMod;
+                }
             }
         }
         else
         {
+            //otherwhise deactivates healing 
             if (Input.GetKeyDown(KeyCode.F) && healing==false)
             {
                 healingState(healing);
@@ -48,6 +61,7 @@ public class heal : MonoBehaviour
             }
         }
     }
+    //changes the state of healing to doinng it or not
     public void  healingState(bool state)
     {
         if (state == true)
@@ -58,10 +72,12 @@ public class heal : MonoBehaviour
             shrinkingcircal.GetComponent<Image>().enabled = false;
             shrinkingcircal.GetComponent<circalShrinking>().enabled = false;
             shrinkingcircalRectTransform.sizeDelta = gameObject.GetComponent<circalShrinking>().startsize;
+            shrinkingcircal.GetComponent<circalShrinking>().shrickSpeed = shrinkingcircal.GetComponent<circalShrinking>().DefaltSpeed; ;
             healing = false;
         }
         else
         {
+            player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             insidecercal.GetComponent<Image>().enabled = true;
             shrinkingcircal.GetComponent<Image>().enabled = true;
             shrinkingcircal.GetComponent<circalShrinking>().enabled = true;

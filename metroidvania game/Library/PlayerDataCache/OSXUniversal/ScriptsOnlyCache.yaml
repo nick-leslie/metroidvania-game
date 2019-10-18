@@ -66,35 +66,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 576}
+      Script: {instanceID: 580}
     - Class: 114
-      Script: {instanceID: 9650}
+      Script: {instanceID: 9654}
     - Class: 114
-      Script: {instanceID: 9854}
+      Script: {instanceID: 9866}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10270}
     - Class: 114
-      Script: {instanceID: 10290}
+      Script: {instanceID: 10304}
     - Class: 114
-      Script: {instanceID: 10406}
+      Script: {instanceID: 10424}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10498}
     - Class: 114
-      Script: {instanceID: 10720}
+      Script: {instanceID: 10748}
     - Class: 114
-      Script: {instanceID: 11044}
+      Script: {instanceID: 11074}
     - Class: 114
-      Script: {instanceID: 11114}
+      Script: {instanceID: 11144}
     - Class: 114
-      Script: {instanceID: 11244}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11490}
-    - Class: 114
-      Script: {instanceID: 11512}
+      Script: {instanceID: 11522}
     - Class: 114
       Script: {instanceID: 11544}
+    - Class: 114
+      Script: {instanceID: 11576}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -149,37 +149,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9650}
+      Script: {instanceID: 9654}
     - Class: 114
-      Script: {instanceID: 9656}
+      Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 9854}
+      Script: {instanceID: 9866}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10220}
+      Script: {instanceID: 10234}
     - Class: 114
-      Script: {instanceID: 10368}
-    - Class: 114
-      Script: {instanceID: 10406}
+      Script: {instanceID: 10384}
     - Class: 114
       Script: {instanceID: 10424}
     - Class: 114
-      Script: {instanceID: 10676}
+      Script: {instanceID: 10442}
     - Class: 114
-      Script: {instanceID: 10880}
+      Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 10704}
+    - Class: 114
+      Script: {instanceID: 10908}
     - Class: 114
       Script: {instanceID: 11114}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11144}
     - Class: 114
-      Script: {instanceID: 11244}
+      Script: {instanceID: 11236}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 32716}
+      Script: {instanceID: 11340}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -214,17 +214,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9650}
+      Script: {instanceID: 9654}
     - Class: 114
-      Script: {instanceID: 9854}
+      Script: {instanceID: 9866}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10498}
     - Class: 114
-      Script: {instanceID: 10720}
+      Script: {instanceID: 10748}
     - Class: 114
-      Script: {instanceID: 11114}
+      Script: {instanceID: 11144}
     - Class: 114
-      Script: {instanceID: 11512}
+      Script: {instanceID: 11544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -390,7 +390,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 193df04ed2e5b8bc916276a8c3f7a34b
+      Hash: bb6a33341c3a0a48ea5599258c0a15bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: heal
@@ -502,6 +502,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 704dcd31abc789439bc3f3cd10b58c2b
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 9a65634b0f2713c6c2d2dd4d09159a88
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -642,7 +654,7 @@ ScriptsOnlyBuild:
     className: Attack
   - hash:
       serializedVersion: 2
-      Hash: 62b78fa879f9cca740330f538611c21a
+      Hash: 50094359a4c18af01cf65ec740c54458
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthMainiger
@@ -772,18 +784,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 704dcd31abc789439bc3f3cd10b58c2b
-    assemblyName: DOTween.dll
-    namespaceName: DG.Tweening.Core
-    className: DOTweenComponent
-  - hash:
-      serializedVersion: 2
-      Hash: 9a65634b0f2713c6c2d2dd4d09159a88
-    assemblyName: DOTween.dll
-    namespaceName: DG.Tweening.Core
-    className: DOTweenSettings
   platform: 2
   scenePathNames:
   - Assets/Scenes/percistenScean.unity

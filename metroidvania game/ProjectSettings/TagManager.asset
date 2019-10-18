@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - SceneManiger
   - lastGroundPos
+  - Bench
+  - StartMenue
   layers:
   - Default
   - TransparentFX

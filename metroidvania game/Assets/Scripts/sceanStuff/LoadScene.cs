@@ -9,9 +9,12 @@ public class LoadScene : MonoBehaviour
     [SerializeField]
     private int currentScene;
     private SceneManiger Maniger;
-    private void Awake()
+    private void Start()
     {
-        Maniger = GameObject.FindWithTag("SceneManiger").GetComponent<SceneManiger>();
+        if (GameObject.FindWithTag("SceneManiger") != null)
+        {
+            Maniger = GameObject.FindWithTag("SceneManiger").GetComponent<SceneManiger>();
+        }
     }
     private void OnTriggerStay2D(Collider2D other)
     {

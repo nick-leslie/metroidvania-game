@@ -10,6 +10,7 @@ public class SceneManiger : MonoBehaviour
     private int loadSceenNum;
     private int unloadScean;
     private GameObject player;
+    private WorkingPlayerData pData;
     public int LoadScene
     {
         get { return loadSceenNum; }
@@ -32,24 +33,48 @@ public class SceneManiger : MonoBehaviour
             }
         }
     }
-    private void Awake()
+    private void Start()
     {
-        if (!gamestart)
-        {
-            SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
-            gamestart = true;
-        }
         player = GameObject.FindWithTag("Player");
+        pData = player.GetComponent<WorkingPlayerData>();
     }
    private void loadScean()
     {
-        SceneManager.LoadSceneAsync(loadSceenNum, LoadSceneMode.Additive);
+        SceneManager.LoadScene(loadSceenNum, LoadSceneMode.Additive);
+        StartCoroutine(setActiveScene(loadSceenNum));
         player.transform.position = Vector3.zero;
         StartCoroutine(unload(unloadScean));
     }
-    IEnumerator unload(int sceeen)
+    public void StartGame()
     {
-        yield return null;
-        SceneManager.UnloadScene(sceeen);
+        pData.loadPlayer();
+        StartloadScean = pData.CurrentScene;
+        if (!gamestart)
+        {
+            if (StartloadScean != 0)
+            {
+                SceneManager.LoadScene(StartloadScean, LoadSceneMode.Additive);
+                StartCoroutine(setActiveScene(loadSceenNum));
+            }
+            else
+            {
+                SceneManager.LoadScene(1, LoadSceneMode.Additive);
+                StartCoroutine(setActiveScene(1));
+            }
+            GameObject.FindWithTag("StartMenue").SetActive(false);
+            player.SetActive(true);
+            player.transform.position = Vector3.zero;
+            gamestart = true;
+        }
     }
+        IEnumerator unload(int sceeen)
+        {
+            yield return null;
+            SceneManager.UnloadScene(sceeen);
+        }
+        IEnumerator setActiveScene(int scene)
+        {
+            yield return new WaitForSeconds(0.2f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(scene));
+        }
 }

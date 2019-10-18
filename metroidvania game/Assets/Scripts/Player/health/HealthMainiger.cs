@@ -53,14 +53,14 @@ public class HealthMainiger : MonoBehaviour
         }
     public int maxHeath
     {
-        get { return maxHeath; }
+        get { return MaxHealth; }
     }
     public int MaxPossible 
     { 
         get { return maxHeath; }
         set
         {
-            if(value<=maxPosible) 
+            if(value>maxPosible) 
             {
                 MaxHealth = value;
             }

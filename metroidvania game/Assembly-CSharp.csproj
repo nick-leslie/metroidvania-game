@@ -86,9 +86,32 @@
     <Compile Include="Assets\Scripts\Player\health\HealthUI.cs" />
     <Compile Include="Assets\Scripts\Player\Movement\Jump.cs" />
     <Compile Include="Assets\Scripts\Player\Movement\Movement.cs" />
+    <Compile Include="Assets\Scripts\Saving and Loading\BenchInteract.cs" />
+    <Compile Include="Assets\Scripts\Saving and Loading\BenchLookUpTable.cs" />
+    <Compile Include="Assets\Scripts\Saving and Loading\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Saving and Loading\SavingScript.cs" />
+    <Compile Include="Assets\Scripts\Saving and Loading\WorkingPlayerData.cs" />
     <Compile Include="Assets\Scripts\sceanStuff\LoadScene.cs" />
     <Compile Include="Assets\Scripts\sceanStuff\SceneManiger.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
