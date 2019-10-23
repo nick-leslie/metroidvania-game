@@ -10,6 +10,7 @@ TagManager:
   - lastGroundPos
   - Bench
   - StartMenue
+  - loadingScreen
   layers:
   - Default
   - TransparentFX

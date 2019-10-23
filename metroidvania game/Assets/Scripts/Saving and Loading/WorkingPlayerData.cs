@@ -6,7 +6,8 @@ public class WorkingPlayerData : MonoBehaviour
 {
     [SerializeField]
     private int _currentBench;
-    private int BenchAmount;
+    [SerializeField]
+    private int MaxBenchNum;
     [SerializeField]
     private int _currentScene;
     public int CurrentBench
@@ -14,7 +15,7 @@ public class WorkingPlayerData : MonoBehaviour
         get { return _currentBench; }
         set
         {
-            if (value <= BenchAmount && value > 0)
+            if(value <= MaxBenchNum && value>0)
             {
                 _currentBench = value;
             }
@@ -33,7 +34,7 @@ public class WorkingPlayerData : MonoBehaviour
     }
     private void Start()
     {
-        BenchAmount = GameObject.FindGameObjectsWithTag("Bench").Length;
+
     }
     public void savePlayer()
     {

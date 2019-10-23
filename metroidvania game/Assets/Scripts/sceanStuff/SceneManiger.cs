@@ -53,21 +53,36 @@ public class SceneManiger : MonoBehaviour
         {
             if (StartloadScean != 0)
             {
-                SceneManager.LoadScene(StartloadScean, LoadSceneMode.Additive);
+                SceneManager.LoadSceneAsync(StartloadScean, LoadSceneMode.Additive);
                 StartCoroutine(setActiveScene(loadSceenNum));
             }
             else
             {
-                SceneManager.LoadScene(1, LoadSceneMode.Additive);
+                SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
                 StartCoroutine(setActiveScene(1));
             }
+            StartCoroutine(DoWhenSceneLoaded());
             GameObject.FindWithTag("StartMenue").SetActive(false);
-            player.SetActive(true);
-            player.transform.position = Vector3.zero;
             gamestart = true;
         }
     }
-        IEnumerator unload(int sceeen)
+    IEnumerator DoWhenSceneLoaded()
+    {
+        int rightBench=0;
+        yield return new WaitForSeconds(0.5f);
+        player.SetActive(true);
+        GameObject[] benches = GameObject.FindGameObjectsWithTag("Bench");
+        for (int i = 0; i < benches.Length; i++)
+        {
+            if (benches[i].GetComponent<BenchInteract>().benchNumber == pData.CurrentBench)
+            {
+                rightBench = i;
+                player.transform.position = benches[i].transform.position;
+            }
+        }
+        GameObject.FindWithTag("loadingScreen").SetActive(false);
+    }
+    IEnumerator unload(int sceeen)
         {
             yield return null;
             SceneManager.UnloadScene(sceeen);

@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{E00A1E57-BA37-A34D-7A6C-0338048962ED}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Saving and Loading/BenchLookUpTable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Movement/Movement.cs">
     <Files>
       <File FileName="Assets/Scripts/Player/health/heal.cs" Line="80" Column="72" />
       <File FileName="Assets/Scripts/circalShrinking.cs" Line="11" Column="51" />
-      <File FileName="Assets/Scripts/Player/Movement/Movement.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/Player/Movement/Movement.cs" Line="25" Column="16" />
       <File FileName="Assets/Scripts/sceanStuff/LoadScene.cs" Line="27" Column="2" />
-      <File FileName="Assets/Scripts/sceanStuff/SceneManiger.cs" Line="66" Column="54" />
-      <File FileName="Assets/Scripts/Saving and Loading/SavingScript.cs" Line="25" Column="13" />
-      <File FileName="Assets/Scripts/Saving and Loading/PlayerData.cs" Line="8" Column="29" />
-      <File FileName="Assets/Scripts/Saving and Loading/BenchLookUpTable.cs" Line="17" Column="6" />
+      <File FileName="Assets/Scripts/Saving and Loading/SavingScript.cs" Line="12" Column="46" />
+      <File FileName="Assets/Scripts/Saving and Loading/PlayerData.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/sceanStuff/SceneManiger.cs" Line="72" Column="47" />
+      <File FileName="Assets/Scripts/Saving and Loading/WorkingPlayerData.cs" Line="20" Column="39" />
+      <File FileName="Assets/Scripts/Saving and Loading/BenchInteract.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

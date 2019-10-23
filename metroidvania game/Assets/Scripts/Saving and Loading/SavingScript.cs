@@ -5,8 +5,6 @@ public static class SavingScript
 {
     public static void savePlayer(WorkingPlayerData pData)
     {
-        Debug.Log("saved");
-        Debug.Log(pData.CurrentScene);
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/SaveData.Demo";
         FileStream stream = new FileStream(path, FileMode.Create);

@@ -1,0 +1,308 @@
+// GENERATED AUTOMATICALLY FROM 'Assets/PlayerControls.inputactions'
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
+
+public class PlayerControls : IInputActionCollection, IDisposable
+{
+    private InputActionAsset asset;
+    public PlayerControls()
+    {
+        asset = InputActionAsset.FromJson(@"{
+    ""name"": ""PlayerControls"",
+    ""maps"": [
+        {
+            ""name"": ""controls"",
+            ""id"": ""65cae79c-2565-4771-93d0-f7bb9773ca75"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""94f6797f-2415-474d-810d-ca603113a7b7"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""sprint"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""5343ab54-5f28-45fe-b237-e9094ca20df1"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""jump"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""44d3f097-619b-429b-92c0-66e60d6268bc"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""06f217dc-2bc4-4df0-81d3-23fb4414da66"",
+                    ""path"": ""<Joystick>/stick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamePad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""wasd"",
+                    ""id"": ""3e4771ab-fe0b-4baf-b1db-676e16bda624"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""618ed78b-0640-458e-9507-70b88923cdd6"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""24c7ed5a-8887-4754-815b-e7291a7dd87c"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""628f5222-1199-4ca6-8f12-13e23e9cb6c1"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""c0d0a84c-c604-4d2b-a2dc-6d8c6cf0c2a7"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""303f6663-9cc8-4077-bd40-58969f9f2521"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f1e9cdd7-f750-499a-aaad-17368fb18f24"",
+                    ""path"": ""<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button11"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamePad"",
+                    ""action"": ""sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c99f61b0-c2b9-4947-93a3-587ca6790dad"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamePad"",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""904daf30-a683-47be-bce9-a7a9527b9e2c"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        }
+    ],
+    ""controlSchemes"": [
+        {
+            ""name"": ""keybord"",
+            ""bindingGroup"": ""keybord"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""gamePad"",
+            ""bindingGroup"": ""gamePad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
+}");
+        // controls
+        m_controls = asset.FindActionMap("controls", throwIfNotFound: true);
+        m_controls_Move = m_controls.FindAction("Move", throwIfNotFound: true);
+        m_controls_sprint = m_controls.FindAction("sprint", throwIfNotFound: true);
+        m_controls_jump = m_controls.FindAction("jump", throwIfNotFound: true);
+    }
+
+    public void Dispose()
+    {
+        UnityEngine.Object.Destroy(asset);
+    }
+
+    public InputBinding? bindingMask
+    {
+        get => asset.bindingMask;
+        set => asset.bindingMask = value;
+    }
+
+    public ReadOnlyArray<InputDevice>? devices
+    {
+        get => asset.devices;
+        set => asset.devices = value;
+    }
+
+    public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
+
+    public bool Contains(InputAction action)
+    {
+        return asset.Contains(action);
+    }
+
+    public IEnumerator<InputAction> GetEnumerator()
+    {
+        return asset.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+
+    public void Enable()
+    {
+        asset.Enable();
+    }
+
+    public void Disable()
+    {
+        asset.Disable();
+    }
+
+    // controls
+    private readonly InputActionMap m_controls;
+    private IControlsActions m_ControlsActionsCallbackInterface;
+    private readonly InputAction m_controls_Move;
+    private readonly InputAction m_controls_sprint;
+    private readonly InputAction m_controls_jump;
+    public struct ControlsActions
+    {
+        private PlayerControls m_Wrapper;
+        public ControlsActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_controls_Move;
+        public InputAction @sprint => m_Wrapper.m_controls_sprint;
+        public InputAction @jump => m_Wrapper.m_controls_jump;
+        public InputActionMap Get() { return m_Wrapper.m_controls; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ControlsActions set) { return set.Get(); }
+        public void SetCallbacks(IControlsActions instance)
+        {
+            if (m_Wrapper.m_ControlsActionsCallbackInterface != null)
+            {
+                Move.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMove;
+                Move.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMove;
+                Move.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMove;
+                sprint.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSprint;
+                sprint.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSprint;
+                sprint.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSprint;
+                jump.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJump;
+                jump.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJump;
+                jump.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJump;
+            }
+            m_Wrapper.m_ControlsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                Move.started += instance.OnMove;
+                Move.performed += instance.OnMove;
+                Move.canceled += instance.OnMove;
+                sprint.started += instance.OnSprint;
+                sprint.performed += instance.OnSprint;
+                sprint.canceled += instance.OnSprint;
+                jump.started += instance.OnJump;
+                jump.performed += instance.OnJump;
+                jump.canceled += instance.OnJump;
+            }
+        }
+    }
+    public ControlsActions @controls => new ControlsActions(this);
+    private int m_keybordSchemeIndex = -1;
+    public InputControlScheme keybordScheme
+    {
+        get
+        {
+            if (m_keybordSchemeIndex == -1) m_keybordSchemeIndex = asset.FindControlSchemeIndex("keybord");
+            return asset.controlSchemes[m_keybordSchemeIndex];
+        }
+    }
+    private int m_gamePadSchemeIndex = -1;
+    public InputControlScheme gamePadScheme
+    {
+        get
+        {
+            if (m_gamePadSchemeIndex == -1) m_gamePadSchemeIndex = asset.FindControlSchemeIndex("gamePad");
+            return asset.controlSchemes[m_gamePadSchemeIndex];
+        }
+    }
+    public interface IControlsActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+    }
+}
