@@ -14,6 +14,17 @@ public class heal : MonoBehaviour
     private HealthMainiger hp;
     [SerializeField]
     private float shrinkSpeedMod;
+    PlayerControls control;
+    private bool PlayerState=true;
+    private bool healPressed = false;
+
+    private void Awake()
+    {
+        control = new PlayerControls();
+        control.controls.heal.performed += Heal_Performed;;
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +41,14 @@ public class heal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(shrinkingcircalRectTransform.sizeDelta.x<=insidecircalRectTransform.sizeDelta.x && shrinkingcircalRectTransform.sizeDelta.y <= insidecircalRectTransform.sizeDelta.y)
+
+    }
+
+    void Heal_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        if (PauseMenu.gameIsPaused == false)
         {
-            //heals if ciracl is inside the other one
-            if(Input.GetKeyDown(KeyCode.F))
+            if (shrinkingcircalRectTransform.sizeDelta.x <= insidecircalRectTransform.sizeDelta.x && shrinkingcircalRectTransform.sizeDelta.y <= insidecircalRectTransform.sizeDelta.y)
             {
                 hp.Health += 1;
                 if (hp.Health == hp.maxHeath)
@@ -47,20 +62,21 @@ public class heal : MonoBehaviour
                     shrinkingcircal.GetComponent<circalShrinking>().shrickSpeed += shrinkSpeedMod;
                 }
             }
-        }
-        else
-        {
-            //otherwhise deactivates healing 
-            if (Input.GetKeyDown(KeyCode.F) && healing==false)
+            else
             {
-                healingState(healing);
-            }
-            else if (Input.GetKeyDown(KeyCode.F))
-            {
-                healingState(healing);
+                //otherwhise activates/deactivates healing 
+                if (healing == false)
+                {
+                    healingState(healing);
+                }
+                else
+                {
+                    healingState(healing);
+                }
             }
         }
     }
+
     //changes the state of healing to doinng it or not
     public void  healingState(bool state)
     {
@@ -86,4 +102,13 @@ public class heal : MonoBehaviour
             healing = true;
         }
     }
+    private void OnEnable()
+    {
+        control.Enable();
+    }
+    private void OnDisable()
+    {
+        control.Disable();
+    }
 }
+

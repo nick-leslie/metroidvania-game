@@ -71,6 +71,7 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Input\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\AI\AIBrain.cs" />
+    <Compile Include="Assets\Scripts\AI\AiCombat.cs" />
     <Compile Include="Assets\Scripts\AI\DamagePlayerOnColition.cs" />
     <Compile Include="Assets\Scripts\AI\FLyingPAthfinding.cs" />
     <Compile Include="Assets\Scripts\cammraControler.cs" />
@@ -80,8 +81,10 @@
     <Compile Include="Assets\Scripts\fallRespawnPos.cs" />
     <Compile Include="Assets\Scripts\findCamra.cs" />
     <Compile Include="Assets\Scripts\lifeTime.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Player\Attack.cs" />
     <Compile Include="Assets\Scripts\Player\CammraShake.cs" />
+    <Compile Include="Assets\Scripts\Player\DreamDash.cs" />
     <Compile Include="Assets\Scripts\Player\health\heal.cs" />
     <Compile Include="Assets\Scripts\Player\health\HealthMainiger.cs" />
     <Compile Include="Assets\Scripts\Player\health\HealthUI.cs" />

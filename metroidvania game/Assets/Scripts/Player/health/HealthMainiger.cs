@@ -11,7 +11,7 @@ public class HealthMainiger : MonoBehaviour
     private float maxPosible;
     [SerializeField]
     private int Itime;
-    private bool Invincibal;
+    public bool Invincibal;
     private void Start()
     {
         _Health = MaxHealth;
@@ -48,9 +48,9 @@ public class HealthMainiger : MonoBehaviour
                     }
                 }
             }
-            }
-
         }
+
+    }
     public int maxHeath
     {
         get { return MaxHealth; }

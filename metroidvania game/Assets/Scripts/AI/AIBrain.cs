@@ -7,6 +7,7 @@ public class AIBrain : MonoBehaviour
     [SerializeField]
     private float maxSpeed;
     private float speed;
+    [SerializeField]
     private GameObject player;
     [SerializeField]
     private int MaxDamage;
@@ -17,6 +18,10 @@ public class AIBrain : MonoBehaviour
     private float knockback;
     [SerializeField]
     private float knockbackDuration;
+    public bool tookDmg=false;
+    [SerializeField]
+    private float _attackRad;
+    public float attackWaitTime; 
     public GameObject Player
     {
         get { return player; }
@@ -62,6 +67,14 @@ public class AIBrain : MonoBehaviour
     {
         get { return knockback; }
     }
+    public float attackrad
+    {
+        get { return _attackRad; }
+        set
+        {
+            _attackRad = value;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -73,11 +86,18 @@ public class AIBrain : MonoBehaviour
     }
     public void takeDamage(int amount)
     {
-        heath.Health -= amount;
-        StartCoroutine(dammag());
-        if(heath.Health<=0)
+        if (tookDmg==false)
         {
-            die();
+            heath.Health -= amount;
+            StartCoroutine(dammag());
+            if (heath.Health <= 0)
+            {
+                die();
+            }
+        }
+        else
+        {
+            return;
         }
     }
     public void die() 

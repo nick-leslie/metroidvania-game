@@ -10,7 +10,9 @@ public class SceneManiger : MonoBehaviour
     private int loadSceenNum;
     private int unloadScean;
     private GameObject player;
+    private HealthMainiger hp;
     private WorkingPlayerData pData;
+    private GameObject loadingScreen;
     public int LoadScene
     {
         get { return loadSceenNum; }
@@ -33,12 +35,14 @@ public class SceneManiger : MonoBehaviour
             }
         }
     }
-    private void Start()
+    private void OnEnable()
     {
         player = GameObject.FindWithTag("Player");
+        loadingScreen = GameObject.FindWithTag("loadingScreen");
         pData = player.GetComponent<WorkingPlayerData>();
+        hp = player.GetComponent<HealthMainiger>();
     }
-   private void loadScean()
+    private void loadScean()
     {
         SceneManager.LoadScene(loadSceenNum, LoadSceneMode.Additive);
         StartCoroutine(setActiveScene(loadSceenNum));
@@ -55,22 +59,26 @@ public class SceneManiger : MonoBehaviour
             {
                 SceneManager.LoadSceneAsync(StartloadScean, LoadSceneMode.Additive);
                 StartCoroutine(setActiveScene(loadSceenNum));
+                SceneManager.sceneLoaded += OnSceneLoaded;
             }
             else
             {
                 SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
                 StartCoroutine(setActiveScene(1));
+                SceneManager.sceneLoaded += OnSceneLoaded;
             }
-            StartCoroutine(DoWhenSceneLoaded());
             GameObject.FindWithTag("StartMenue").SetActive(false);
             gamestart = true;
         }
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StartCoroutine(DoWhenSceneLoaded());
     }
     IEnumerator DoWhenSceneLoaded()
     {
         int rightBench=0;
         yield return new WaitForSeconds(0.5f);
-        player.SetActive(true);
         GameObject[] benches = GameObject.FindGameObjectsWithTag("Bench");
         for (int i = 0; i < benches.Length; i++)
         {
@@ -78,9 +86,15 @@ public class SceneManiger : MonoBehaviour
             {
                 rightBench = i;
                 player.transform.position = benches[i].transform.position;
+                Debug.Log(loadSceenNum);
+                benches[i].GetComponent<BenchInteract>().SceneNumber = loadSceenNum;
             }
         }
-        GameObject.FindWithTag("loadingScreen").SetActive(false);
+       loadingScreen.SetActive(false);
+        player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        yield return new WaitForSeconds(1);
+        //if(SceneManager.GetAllScenes)
+        
     }
     IEnumerator unload(int sceeen)
         {
@@ -92,4 +106,8 @@ public class SceneManiger : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(scene));
         }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }

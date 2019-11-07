@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/PlayerControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Input/PlayerControls.inputactions'
 
 using System;
 using System.Collections;
@@ -39,6 +39,46 @@ public class PlayerControls : IInputActionCollection, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""44d3f097-619b-429b-92c0-66e60d6268bc"",
                     ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""interact"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""734acd99-df04-4659-a010-ef4a89206354"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""attack"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""fdc051a3-53b4-48e3-ae42-3626603d975e"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""heal"",
+                    ""type"": ""Button"",
+                    ""id"": ""8666d784-1aab-4c38-a55a-1f9a51c49348"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""1cb545f5-9e43-4fe5-9c43-68a43027c999"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""DreamDash"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a7d7400-23bb-4d67-95e4-c4586d3c1dee"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -135,7 +175,7 @@ public class PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c99f61b0-c2b9-4947-93a3-587ca6790dad"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamePad"",
@@ -151,6 +191,116 @@ public class PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""keybord"",
                     ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4cc67ea-ffd7-42a2-abe8-e3825730baa0"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ff9134c-eb7f-4aab-998d-aa50b02565f1"",
+                    ""path"": ""<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamePad"",
+                    ""action"": ""interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""903913ff-3c94-425e-80e9-25093862e936"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b3f92e68-d8c8-4308-82df-df45f2c4e343"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""783bd11e-7d36-4038-bb83-947bd0b6e0d3"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3006cbc8-5c5f-4b5f-b249-7064cdc6b5c8"",
+                    ""path"": ""<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamePad"",
+                    ""action"": ""heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3500a0de-f56f-4555-9b04-3147faa621ef"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keybord"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""789bcf1b-91ba-453d-ac63-b2500b080339"",
+                    ""path"": ""<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button10"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamePad"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a66a3091-3e27-483c-a466-0b5dddd149e7"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DreamDash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0beaf25a-4325-48dc-9dc3-f4fc0175b27e"",
+                    ""path"": ""<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DreamDash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -187,6 +337,11 @@ public class PlayerControls : IInputActionCollection, IDisposable
         m_controls_Move = m_controls.FindAction("Move", throwIfNotFound: true);
         m_controls_sprint = m_controls.FindAction("sprint", throwIfNotFound: true);
         m_controls_jump = m_controls.FindAction("jump", throwIfNotFound: true);
+        m_controls_interact = m_controls.FindAction("interact", throwIfNotFound: true);
+        m_controls_attack = m_controls.FindAction("attack", throwIfNotFound: true);
+        m_controls_heal = m_controls.FindAction("heal", throwIfNotFound: true);
+        m_controls_Pause = m_controls.FindAction("Pause", throwIfNotFound: true);
+        m_controls_DreamDash = m_controls.FindAction("DreamDash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -239,6 +394,11 @@ public class PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_controls_Move;
     private readonly InputAction m_controls_sprint;
     private readonly InputAction m_controls_jump;
+    private readonly InputAction m_controls_interact;
+    private readonly InputAction m_controls_attack;
+    private readonly InputAction m_controls_heal;
+    private readonly InputAction m_controls_Pause;
+    private readonly InputAction m_controls_DreamDash;
     public struct ControlsActions
     {
         private PlayerControls m_Wrapper;
@@ -246,6 +406,11 @@ public class PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_controls_Move;
         public InputAction @sprint => m_Wrapper.m_controls_sprint;
         public InputAction @jump => m_Wrapper.m_controls_jump;
+        public InputAction @interact => m_Wrapper.m_controls_interact;
+        public InputAction @attack => m_Wrapper.m_controls_attack;
+        public InputAction @heal => m_Wrapper.m_controls_heal;
+        public InputAction @Pause => m_Wrapper.m_controls_Pause;
+        public InputAction @DreamDash => m_Wrapper.m_controls_DreamDash;
         public InputActionMap Get() { return m_Wrapper.m_controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -264,6 +429,21 @@ public class PlayerControls : IInputActionCollection, IDisposable
                 jump.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJump;
                 jump.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJump;
                 jump.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJump;
+                interact.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteract;
+                interact.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteract;
+                interact.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteract;
+                attack.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnAttack;
+                attack.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnAttack;
+                attack.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnAttack;
+                heal.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnHeal;
+                heal.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnHeal;
+                heal.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnHeal;
+                Pause.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnPause;
+                Pause.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnPause;
+                Pause.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnPause;
+                DreamDash.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDreamDash;
+                DreamDash.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDreamDash;
+                DreamDash.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDreamDash;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -277,6 +457,21 @@ public class PlayerControls : IInputActionCollection, IDisposable
                 jump.started += instance.OnJump;
                 jump.performed += instance.OnJump;
                 jump.canceled += instance.OnJump;
+                interact.started += instance.OnInteract;
+                interact.performed += instance.OnInteract;
+                interact.canceled += instance.OnInteract;
+                attack.started += instance.OnAttack;
+                attack.performed += instance.OnAttack;
+                attack.canceled += instance.OnAttack;
+                heal.started += instance.OnHeal;
+                heal.performed += instance.OnHeal;
+                heal.canceled += instance.OnHeal;
+                Pause.started += instance.OnPause;
+                Pause.performed += instance.OnPause;
+                Pause.canceled += instance.OnPause;
+                DreamDash.started += instance.OnDreamDash;
+                DreamDash.performed += instance.OnDreamDash;
+                DreamDash.canceled += instance.OnDreamDash;
             }
         }
     }
@@ -304,5 +499,10 @@ public class PlayerControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnDreamDash(InputAction.CallbackContext context);
     }
 }

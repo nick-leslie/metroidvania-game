@@ -121,3 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   benchNumber: 0
+  SceneNumber: 0
+  interacting: 0
+  InteractWaitTime: 0.5

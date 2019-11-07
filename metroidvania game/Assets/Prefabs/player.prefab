@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1568376019572476782}
   - component: {fileID: 1568376019572476783}
   - component: {fileID: 1568376019572476768}
+  - component: {fileID: 148641649504605409}
   - component: {fileID: 1568376019572476769}
   - component: {fileID: 1568376019572476770}
   m_Layer: 8
@@ -154,6 +155,8 @@ MonoBehaviour:
   sprintSpeedMax: 900
   sprintIncreceOvertime: 450
   walkspeed: 500
+  movespeed: 0
+  moveInput: {x: 0, y: 0}
 --- !u!114 &1568376019572476782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +180,7 @@ MonoBehaviour:
   betterjump: 1
   jumpHeight: 0.7
   timeToJumpApex: 0.09
+  IsGrounded: 0
 --- !u!114 &1568376019572476783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,10 +213,24 @@ MonoBehaviour:
   whattohit:
     serializedVersion: 2
     m_Bits: 513
-  force: 500
+  force: 30
+  AttackDire: {x: 0, y: 0}
   canatack: 1
   slash: {fileID: 1568376019814208745}
   dammage: 1
+  deadzone: 0
+--- !u!114 &148641649504605409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568376019572476776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2988f888c4f6d415c8b861899e6c7bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1568376019572476769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 3
   maxPosible: 0
+  Itime: 0
 --- !u!114 &1568376019572476770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,8 +525,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6743aaaa3031d416096e709f04b31be7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -545,6 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insidecercal: {fileID: 1568376020688370402}
+  shrinkSpeedMod: 0
 --- !u!1 &1568376020630081897
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,8 +656,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 2442ba38249e545a299907f93ebe64df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -713,8 +729,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -788,8 +802,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -964,8 +976,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0

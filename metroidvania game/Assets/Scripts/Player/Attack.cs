@@ -11,8 +11,8 @@ public class Attack : MonoBehaviour
     [SerializeField]
     private float force;
     private Vector3 pos;
-    private float vertical;
-    private float horizontal;
+    [SerializeField]
+    private Vector2 AttackDire;
     private Rigidbody2D rb;
     [SerializeField]
     private bool canatack = true;
@@ -20,6 +20,21 @@ public class Attack : MonoBehaviour
     private GameObject slash;
     [SerializeField]
     private int dammage;
+    PlayerControls control;
+    [SerializeField]
+    private float deadzone;
+    private float lastDire;
+    // this varuable is for further keeping track of last input for nutral press cases
+    //true is for up and false is for down 
+    private bool lrudDire;
+    private void Awake()
+    {
+        control = new PlayerControls();
+        control.controls.attack.performed += Attack_Performed;
+        control.controls.Move.performed += ctx => AttackDire = ctx.ReadValue<Vector2>().normalized;
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,32 +44,53 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //------------------------------------
-        //target finding
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-        if (canatack == true)
-        {
-            if (vertical != 0)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    target(vertical, Vector2.up, "ver");
-                }
-            }
-            else if (horizontal != 0)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    target(horizontal, Vector2.right, "hor");
-                }
-            }
-        }
         if (slash.active == true)
         {
             StartCoroutine(attackWait());
         }
     }
+
+    void Attack_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        //------------------------------------
+        //target finding
+        if (canatack == true)
+        {
+            if (PauseMenu.gameIsPaused == false)
+            {
+                if (AttackDire.y > deadzone || AttackDire.y < -deadzone)
+                {
+                    target(AttackDire.y, Vector2.up, "ver");
+                    lastDire = AttackDire.y;
+                    lrudDire = true;
+                }
+                else if (AttackDire.x > deadzone || AttackDire.x < -deadzone)
+                {
+                    target(AttackDire.x, Vector2.right, "hor");
+                    lastDire = AttackDire.x;
+                    lrudDire = false;
+                }
+                else
+                {
+                    Vector3 goodVec;
+                    string goodString;
+                    if(lrudDire) 
+                    {
+                        goodVec = Vector3.up;
+                        goodString = "ver";
+                    }
+                    else
+                    {
+                        goodVec = Vector3.right;
+                        goodString = "hor";
+                    }
+                    target(lastDire, goodVec, goodString);
+                }
+            }
+        }
+    }
+
+
     private IEnumerator attackWait()
     {
         yield return new WaitUntil(() => slash.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("wait") == true);
@@ -78,26 +114,26 @@ public class Attack : MonoBehaviour
             canatack = false;
         }
     }
-/// <summary>
-/// force in the posidt direction
-/// </summary>
-private void backforce(Vector3 vectorDirection, float type)
-{
-    RaycastHit2D hit = Physics2D.Raycast(transform.position, vectorDirection * type, Mathf.Infinity, whattohit);
-    Debug.DrawRay(transform.position, vectorDirection * type, color: Color.blue, radis);
-    if (hit.collider != null)
+    /// <summary>
+    /// force in the posidt direction
+    /// </summary>
+    private void backforce(Vector3 vectorDirection, float type)
     {
-        rb.velocity = Vector3.zero;
-        Vector3 hitpos = new Vector3(hit.point.x, hit.point.y, transform.position.z);
-        Vector2 dire = transform.position - hitpos;
-        rb.AddRelativeForce(dire.normalized * force);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, vectorDirection * type, Mathf.Infinity, whattohit);
+        Debug.DrawRay(transform.position, vectorDirection * type, color: Color.blue, radis);
+        if (hit.collider != null)
+        {
+            rb.velocity = Vector3.zero;
+            Vector3 hitpos = new Vector3(hit.point.x, hit.point.y, transform.position.z);
+            Vector2 dire = transform.position - hitpos;
+            rb.AddRelativeForce(dire.normalized * force,ForceMode2D.Impulse);
+        }
     }
-}
-//-------------------------------
-/// <summary>
-/// sets the dirdection of the slash
-/// </summary>
-private void slashdire(string state, float dire)
+    //-------------------------------
+    /// <summary>
+    /// sets the dirdection of the slash
+    /// </summary>
+    private void slashdire(string state, float dire)
 {
     if (state == "ver")
     {
@@ -156,14 +192,23 @@ private IEnumerator waitTillAnimDone()
 private void OnDrawGizmosSelected()
 {
     Gizmos.color = Color.red;
-    if (vertical != 0)
+    if (AttackDire.y != 0)
     {
-        Gizmos.DrawWireSphere(transform.position + (Vector3.up * vertical), radis);
+        Gizmos.DrawWireSphere(transform.position + (Vector3.up * AttackDire.y), radis);
     }
-    else if (horizontal != 0)
+    else if (AttackDire.x != 0)
     {
-        Gizmos.DrawWireSphere(transform.position + (Vector3.right * horizontal), radis);
+        Gizmos.DrawWireSphere(transform.position + (Vector3.right * AttackDire.x), radis);
     }
+
 }
+    private void OnEnable()
+    {
+        control.Enable();
+    }
+    private void OnDisable()
+    {
+        control.Disable();
+    }
 }
 

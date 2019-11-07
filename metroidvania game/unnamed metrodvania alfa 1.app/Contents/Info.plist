@@ -12,7 +12,7 @@
 	<key>CFBundleExecutable</key>
 	<string>metroidvania game</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Unity Player version 2019.2.0f1 (20c1667945cf). (c) 2019 Unity Technologies ApS. All rights reserved.</string>
+	<string>Unity Player version 2019.2.9f1 (ebce4d76e6e8). (c) 2019 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
 	<string>PlayerIcon.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -38,7 +38,7 @@
 	<key>NSPrincipalClass</key>
 	<string>PlayerApplication</string>
 	<key>UnityBuildNumber</key>
-	<string>20c1667945cf</string>
+	<string>ebce4d76e6e8</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9.0</string>
 </dict>

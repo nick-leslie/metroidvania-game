@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class Jump : MonoBehaviour
 {
     [SerializeField]
@@ -26,6 +26,13 @@ public class Jump : MonoBehaviour
     [SerializeField]
     private float timeToJumpApex;
     public bool IsGrounded;
+    PlayerControls Input;
+    private float jumpInput;
+    private void Awake()
+    {
+        Input = new PlayerControls();
+        Input.controls.jump.performed += ctx => jumpInput = ctx.ReadValue<float>();
+    }
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -41,14 +48,14 @@ public class Jump : MonoBehaviour
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplayer - 1) * Time.deltaTime;
             }
-            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
+            else if (rb.velocity.y > 0 && jumpInput<1)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (LowJumpMultiplyer - 1) * Time.deltaTime;
             }
     }
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (jumpInput>0)
         {
             if (canJump)
             {
@@ -71,5 +78,13 @@ public class Jump : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other)
     {
         IsGrounded = false;
+    }
+    private void OnEnable()
+    {
+        Input.Enable();
+    }
+    private void OnDestroy()
+    {
+        Input.Disable();
     }
 }
