@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 394}
+  m_MinSize: {x: 950, y: 644}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1414
     height: 855
-  m_MinSize: {x: 950, y: 394}
+  m_MinSize: {x: 950, y: 644}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -110,10 +110,10 @@ MonoBehaviour:
     y: 30
     width: 1414
     height: 805
-  m_MinSize: {x: 583, y: 344}
-  m_MaxSize: {x: 12008, y: 8044}
+  m_MinSize: {x: 713, y: 594}
+  m_MaxSize: {x: 18008, y: 18044}
   vertical: 1
-  controlID: 75
+  controlID: 19297
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,17 +128,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 7}
-  - {fileID: 12}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1414
     height: 805
-  m_MinSize: {x: 583, y: 344}
-  m_MaxSize: {x: 12008, y: 8044}
+  m_MinSize: {x: 713, y: 594}
+  m_MaxSize: {x: 18008, y: 18044}
   vertical: 0
-  controlID: 76
+  controlID: 19298
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,17 +153,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 8}
-  - {fileID: 11}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1043
     height: 805
-  m_MinSize: {x: 306, y: 344}
-  m_MaxSize: {x: 8006, y: 8044}
+  m_MinSize: {x: 436, y: 594}
+  m_MaxSize: {x: 14006, y: 18044}
   vertical: 1
-  controlID: 77
+  controlID: 19349
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,18 +178,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 9}
-  - {fileID: 10}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1043
     height: 533
-  m_MinSize: {x: 306, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 436, y: 472}
+  m_MaxSize: {x: 14006, y: 14022}
   vertical: 0
-  controlID: 78
+  controlID: 19350
 --- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 276
+    height: 533
+  m_MinSize: {x: 232, y: 472}
+  m_MaxSize: {x: 10002, y: 14022}
+  vertical: 1
+  controlID: 19422
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,16 +231,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 263
-    height: 533
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 15}
+    width: 276
+    height: 261
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &10
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,24 +255,49 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 263
+    x: 0
+    y: 261
+    width: 276
+    height: 272
+  m_MinSize: {x: 232, y: 272}
+  m_MaxSize: {x: 10002, y: 10022}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 276
     y: 0
-    width: 780
+    width: 767
     height: 533
-  m_MinSize: {x: 104, y: 122}
+  m_MinSize: {x: 204, y: 222}
   m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 16}
-  - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  - {fileID: 13}
-  - {fileID: 14}
-  m_Selected: 2
-  m_LastSelected: 3
---- !u!114 &11
+  - {fileID: 21}
+  - {fileID: 22}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 5
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,14 +318,14 @@ MonoBehaviour:
     height: 272
   m_MinSize: {x: 102, y: 122}
   m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 23}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 21}
-  - {fileID: 22}
   - {fileID: 23}
-  m_Selected: 2
+  - {fileID: 24}
+  - {fileID: 25}
+  m_Selected: 1
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,275 +346,15 @@ MonoBehaviour:
     height: 805
   m_MinSize: {x: 277, y: 72}
   m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 26}
   m_Panes:
-  - {fileID: 24}
-  - {fileID: 25}
   - {fileID: 26}
+  - {fileID: 27}
+  - {fileID: 28}
+  - {fileID: 29}
   m_Selected: 0
-  m_LastSelected: 2
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb55afc2c109f42f2af37941a8c9300e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 600, y: 300}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: PlayerControls (Input Actions)
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 263
-    y: 75
-    width: 778
-    height: 514
-  m_ViewDataDictionary: {fileID: 0}
-  m_ActionMapsTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 98a0afb7
-    m_LastClickedID: -1213226856
-    m_ExpandedIDs: 00000000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-  m_ActionsTreeState:
-    scrollPos: {x: 0, y: 42}
-    m_SelectedIDs: 853ee37a
-    m_LastClickedID: 2061713029
-    m_ExpandedIDs: f49bcd831e197498203a4ca798a0afb78939c6cd5bee6be5890af6eab0b24843948b4e43853ee37a
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-  m_ControlPickerViewState:
-    m_AdvancedDropdownState:
-      states: []
-    m_ManualPathEditMode: 0
-  m_ActionAssetManager:
-    m_AssetObjectForEditing: {fileID: 0}
-    m_ImportedAssetObject: {fileID: -944628639613478452, guid: 4535e2ac59f2c4ef092dd74e8837f851,
-      type: 3}
-    m_AssetGUID: 4535e2ac59f2c4ef092dd74e8837f851
-    m_AssetPath: Assets/Input/PlayerControls.inputactions
-    m_ImportedAssetJson: "{\n    \"name\": \"PlayerControls\",\n    \"maps\": [\n
-      \       {\n            \"name\": \"controls\",\n            \"id\": \"65cae79c-2565-4771-93d0-f7bb9773ca75\",\n
-      \           \"actions\": [\n                {\n                    \"name\":
-      \"Move\",\n                    \"type\": \"PassThrough\",\n                    \"id\":
-      \"94f6797f-2415-474d-810d-ca603113a7b7\",\n                    \"expectedControlType\":
-      \"Vector2\",\n                    \"processors\": \"\",\n                    \"interactions\":
-      \"\"\n                },\n                {\n                    \"name\": \"sprint\",\n
-      \                   \"type\": \"PassThrough\",\n                    \"id\":
-      \"5343ab54-5f28-45fe-b237-e9094ca20df1\",\n                    \"expectedControlType\":
-      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
-      \"\"\n                },\n                {\n                    \"name\": \"jump\",\n
-      \                   \"type\": \"PassThrough\",\n                    \"id\":
-      \"44d3f097-619b-429b-92c0-66e60d6268bc\",\n                    \"expectedControlType\":
-      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
-      \"\"\n                },\n                {\n                    \"name\": \"interact\",\n
-      \                   \"type\": \"PassThrough\",\n                    \"id\":
-      \"734acd99-df04-4659-a010-ef4a89206354\",\n                    \"expectedControlType\":
-      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
-      \"\"\n                },\n                {\n                    \"name\": \"attack\",\n
-      \                   \"type\": \"PassThrough\",\n                    \"id\":
-      \"fdc051a3-53b4-48e3-ae42-3626603d975e\",\n                    \"expectedControlType\":
-      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
-      \"Press\"\n                },\n                {\n                    \"name\":
-      \"heal\",\n                    \"type\": \"Button\",\n                    \"id\":
-      \"8666d784-1aab-4c38-a55a-1f9a51c49348\",\n                    \"expectedControlType\":
-      \"Button\",\n                    \"processors\": \"\",\n                    \"interactions\":
-      \"\"\n                },\n                {\n                    \"name\": \"Pause\",\n
-      \                   \"type\": \"Button\",\n                    \"id\": \"1cb545f5-9e43-4fe5-9c43-68a43027c999\",\n
-      \                   \"expectedControlType\": \"\",\n                    \"processors\":
-      \"\",\n                    \"interactions\": \"\"\n                },\n                {\n
-      \                   \"name\": \"DreamDash\",\n                    \"type\":
-      \"Button\",\n                    \"id\": \"2a7d7400-23bb-4d67-95e4-c4586d3c1dee\",\n
-      \                   \"expectedControlType\": \"\",\n                    \"processors\":
-      \"\",\n                    \"interactions\": \"\"\n                }\n            ],\n
-      \           \"bindings\": [\n                {\n                    \"name\":
-      \"\",\n                    \"id\": \"06f217dc-2bc4-4df0-81d3-23fb4414da66\",\n
-      \                   \"path\": \"<Joystick>/stick\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"gamePad\",\n                    \"action\": \"Move\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"wasd\",\n                    \"id\":
-      \"3e4771ab-fe0b-4baf-b1db-676e16bda624\",\n                    \"path\": \"2DVector\",\n
-      \                   \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"\",\n                    \"action\":
-      \"Move\",\n                    \"isComposite\": true,\n                    \"isPartOfComposite\":
-      false\n                },\n                {\n                    \"name\":
-      \"up\",\n                    \"id\": \"618ed78b-0640-458e-9507-70b88923cdd6\",\n
-      \                   \"path\": \"<Keyboard>/w\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"keybord\",\n                    \"action\": \"Move\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": true\n                },\n
-      \               {\n                    \"name\": \"down\",\n                    \"id\":
-      \"24c7ed5a-8887-4754-815b-e7291a7dd87c\",\n                    \"path\": \"<Keyboard>/s\",\n
-      \                   \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
-      \"Move\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      true\n                },\n                {\n                    \"name\": \"left\",\n
-      \                   \"id\": \"628f5222-1199-4ca6-8f12-13e23e9cb6c1\",\n                    \"path\":
-      \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
-      \"Move\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      true\n                },\n                {\n                    \"name\": \"right\",\n
-      \                   \"id\": \"c0d0a84c-c604-4d2b-a2dc-6d8c6cf0c2a7\",\n                    \"path\":
-      \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
-      \"Move\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      true\n                },\n                {\n                    \"name\": \"\",\n
-      \                   \"id\": \"303f6663-9cc8-4077-bd40-58969f9f2521\",\n                    \"path\":
-      \"<Keyboard>/leftShift\",\n                    \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
-      \"sprint\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      false\n                },\n                {\n                    \"name\":
-      \"\",\n                    \"id\": \"f1e9cdd7-f750-499a-aaad-17368fb18f24\",\n
-      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
-      Core (Plus) Wired Controller>/button11\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"gamePad\",\n                    \"action\": \"sprint\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"\",\n                    \"id\":
-      \"c99f61b0-c2b9-4947-93a3-587ca6790dad\",\n                    \"path\": \"<HID::Bensussen
-      Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button2\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"gamePad\",\n                    \"action\": \"jump\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"\",\n                    \"id\":
-      \"904daf30-a683-47be-bce9-a7a9527b9e2c\",\n                    \"path\": \"<Keyboard>/w\",\n
-      \                   \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
-      \"jump\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      false\n                },\n                {\n                    \"name\":
-      \"\",\n                    \"id\": \"a4cc67ea-ffd7-42a2-abe8-e3825730baa0\",\n
-      \                   \"path\": \"<Keyboard>/e\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"keybord\",\n                    \"action\": \"interact\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"\",\n                    \"id\":
-      \"8ff9134c-eb7f-4aab-998d-aa50b02565f1\",\n                    \"path\": \"<HID::Bensussen
-      Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button3\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"gamePad\",\n                    \"action\": \"interact\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"\",\n                    \"id\":
-      \"903913ff-3c94-425e-80e9-25093862e936\",\n                    \"path\": \"<Keyboard>/space\",\n
-      \                   \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
-      \"attack\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      false\n                },\n                {\n                    \"name\":
-      \"\",\n                    \"id\": \"b3f92e68-d8c8-4308-82df-df45f2c4e343\",\n
-      \                   \"path\": \"<Joystick>/trigger\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"attack\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"\",\n                    \"id\":
-      \"783bd11e-7d36-4038-bb83-947bd0b6e0d3\",\n                    \"path\": \"<Keyboard>/f\",\n
-      \                   \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"\",\n                    \"action\":
-      \"heal\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      false\n                },\n                {\n                    \"name\":
-      \"\",\n                    \"id\": \"3006cbc8-5c5f-4b5f-b249-7064cdc6b5c8\",\n
-      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
-      Core (Plus) Wired Controller>/button4\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"gamePad\",\n                    \"action\": \"heal\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"\",\n                    \"id\":
-      \"3500a0de-f56f-4555-9b04-3147faa621ef\",\n                    \"path\": \"<Keyboard>/escape\",\n
-      \                   \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
-      \"Pause\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      false\n                },\n                {\n                    \"name\":
-      \"\",\n                    \"id\": \"789bcf1b-91ba-453d-ac63-b2500b080339\",\n
-      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
-      Core (Plus) Wired Controller>/button10\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"gamePad\",\n                    \"action\": \"Pause\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                },\n
-      \               {\n                    \"name\": \"\",\n                    \"id\":
-      \"a66a3091-3e27-483c-a466-0b5dddd149e7\",\n                    \"path\": \"<Keyboard>/q\",\n
-      \                   \"interactions\": \"\",\n                    \"processors\":
-      \"\",\n                    \"groups\": \"\",\n                    \"action\":
-      \"DreamDash\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      false\n                },\n                {\n                    \"name\":
-      \"\",\n                    \"id\": \"0beaf25a-4325-48dc-9dc3-f4fc0175b27e\",\n
-      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
-      Core (Plus) Wired Controller>/button8\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"DreamDash\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                }\n
-      \           ]\n        }\n    ],\n    \"controlSchemes\": [\n        {\n            \"name\":
-      \"keybord\",\n            \"bindingGroup\": \"keybord\",\n            \"devices\":
-      [\n                {\n                    \"devicePath\": \"<Keyboard>\",\n
-      \                   \"isOptional\": false,\n                    \"isOR\": false\n
-      \               }\n            ]\n        },\n        {\n            \"name\":
-      \"gamePad\",\n            \"bindingGroup\": \"gamePad\",\n            \"devices\":
-      [\n                {\n                    \"devicePath\": \"<Gamepad>\",\n                    \"isOptional\":
-      false,\n                    \"isOR\": false\n                }\n            ]\n
-      \       }\n    ]\n}"
-    m_IsDirty: 0
-  m_Toolbar:
-    m_IsDirty: 0
-    m_SelectedControlSchemeIndex: -1
-    m_SelectedDeviceRequirementIndex: -1
-    m_ControlSchemes:
-    - m_Name: keybord
-      m_BindingGroup: keybord
-      m_DeviceRequirements:
-      - m_ControlPath: <Keyboard>
-        m_Flags: 0
-    - m_Name: gamePad
-      m_BindingGroup: gamePad
-      m_DeviceRequirements:
-      - m_ControlPath: <Gamepad>
-        m_Flags: 0
-    m_SearchText: 
-  m_DirtyTitle:
-    m_Text: (*) PlayerControls (Input Actions)
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Title:
-    m_Text: PlayerControls (Input Actions)
-    m_Image: {fileID: 0}
-    m_Tooltip: 
---- !u!114 &14
+  m_LastSelected: 1
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -585,9 +375,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 263
+    x: 276
     y: 75
-    width: 778
+    width: 765
     height: 514
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
@@ -601,8 +391,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -389
-    m_HBaseRangeMax: 389
+    m_HBaseRangeMin: -382.5
+    m_HBaseRangeMax: 382.5
     m_VBaseRangeMin: -248.5
     m_VBaseRangeMax: 248.5
     m_HAllowExceedBaseRangeMin: 1
@@ -613,7 +403,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -622,30 +412,30 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 778
+      width: 765
       height: 497
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 389, y: 248.5}
+    m_Translation: {x: 382.5, y: 248.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -389
+      x: -382.5
       y: -248.5
-      width: 778
+      width: 765
       height: 497
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1556, y: 1028}
+  m_LastWindowPixelSize: {x: 1530, y: 1028}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -668,31 +458,31 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 75
-    width: 263
-    height: 514
+    width: 276
+    height: 242
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: bcfcfeff70c00000
+      m_SelectedIDs: 62000100
+      m_LastClickedID: 65634
+      m_ExpandedIDs: e443feff1446feffa249feffd24cfeffcc5bfeff545dfeffc65ffeff5662feffea64feff6a67feff5c6afefff272feffee74feff5a76feffee76feff3878feff6879fefffc79feff747bfeff087cfeff447efeffa07ffeff0c86feffaa91feff8a94feffe4b1feff12b7feffd2c1feff12c4feff26e9feff86ebfeff78edfeffa6eefeffe8f0feff88f1feff72f4feff8c09ffffbe0cffffbe14ffff0616fffffa1bffffa61dffffca1effffd025ffff5c2affffde2affff6830ffffd455ffffd05bfffffa5cffff7a5fffff4c63ffff6a64ffff3e66ffff3e6fffffd26fffff8470ffff0871ffffce72ffff4ad2ffff58d2ffffe4d2ffffecd4fffffefaffff22fbffffdc420000fa420000909900009e9b0000089e0000daa700004ea80000c4b00000ceb200005ebc000068cc000018cd0000c2fd0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: enemy (2)
+        m_OriginalName: enemy (2)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -104020
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 9}
+        m_ClientGUIView: {fileID: 10}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -700,7 +490,144 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 795bf92356eec4f448d52261ec9352b1
---- !u!114 &16
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 336
+    width: 276
+    height: 253
+  m_ViewDataDictionary: {fileID: 0}
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Scenes
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scenes
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: /Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania
+    game
+  m_LockTracker:
+    m_IsLocked: 1
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 16400000
+    m_LastClickedID: 16406
+    m_ExpandedIDs: 00000000d6360000b4a20000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000d6360000b4a20000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -721,9 +648,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 263
+    x: 276
     y: 75
-    width: 778
+    width: 765
     height: 514
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -736,9 +663,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.7193556, y: -1.7406846, z: -0.3371043}
+    m_Target: {x: 756.8455, y: 470.908, z: -2876.4402}
     speed: 2
-    m_Value: {x: -23.794523, y: 9.32175, z: -2527.536}
+    m_Value: {x: 756.75806, y: 470.6679, z: -2876.3953}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -771,9 +698,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.163765
+    m_Target: 11.078299
     speed: 2
-    m_Value: 8.983923
+    m_Value: 11.618563
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -799,33 +726,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 2048, y: 2048}
-  m_TitleContent:
-    m_Text: Asset Store
-    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 263
-    y: 75
-    width: 778
-    height: 514
-  m_ViewDataDictionary: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -846,45 +747,14 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 263
+    x: 277
     y: 75
-    width: 778
-    height: 514
+    width: 765
+    height: 515
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 49260
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f683d99f24875748a6656966ca9cea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 240, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Tile Palette
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 263
-    y: 75
-    width: 778
-    height: 514
-  m_ViewDataDictionary: {fileID: 0}
-  m_PreviewResizer:
-    m_CachedPref: -50
-    m_ControlHash: 1964396721
-    m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 7579899445143659921, guid: ea643be54acad45bab25f451951abb50,
-    type: 3}
+  m_LastSelectedObjectID: 40478
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -905,10 +775,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 263
+    x: 277
     y: 75
-    width: 778
-    height: 514
+    width: 765
+    height: 515
   m_ViewDataDictionary: {fileID: 0}
   Collection:
     filter: 0
@@ -106463,6 +106333,293 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_TitleContent:
+    m_Text: Asset Store
+    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 277
+    y: 75
+    width: 765
+    height: 515
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb55afc2c109f42f2af37941a8c9300e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 600, y: 300}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: PlayerControls (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 276
+    y: 75
+    width: 765
+    height: 514
+  m_ViewDataDictionary: {fileID: 0}
+  m_ActionMapsTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 98a0afb7
+    m_LastClickedID: -1213226856
+    m_ExpandedIDs: 00000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ActionsTreeState:
+    scrollPos: {x: 0, y: 42}
+    m_SelectedIDs: 853ee37a
+    m_LastClickedID: 2061713029
+    m_ExpandedIDs: f49bcd831e197498203a4ca798a0afb78939c6cd5bee6be5890af6eab0b24843948b4e43853ee37a
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ControlPickerViewState:
+    m_AdvancedDropdownState:
+      states: []
+    m_ManualPathEditMode: 0
+  m_ActionAssetManager:
+    m_AssetObjectForEditing: {fileID: 0}
+    m_ImportedAssetObject: {fileID: -944628639613478452, guid: 4535e2ac59f2c4ef092dd74e8837f851,
+      type: 3}
+    m_AssetGUID: 4535e2ac59f2c4ef092dd74e8837f851
+    m_AssetPath: Assets/Input/PlayerControls.inputactions
+    m_ImportedAssetJson: "{\n    \"name\": \"PlayerControls\",\n    \"maps\": [\n
+      \       {\n            \"name\": \"controls\",\n            \"id\": \"65cae79c-2565-4771-93d0-f7bb9773ca75\",\n
+      \           \"actions\": [\n                {\n                    \"name\":
+      \"Move\",\n                    \"type\": \"PassThrough\",\n                    \"id\":
+      \"94f6797f-2415-474d-810d-ca603113a7b7\",\n                    \"expectedControlType\":
+      \"Vector2\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"\"\n                },\n                {\n                    \"name\": \"sprint\",\n
+      \                   \"type\": \"PassThrough\",\n                    \"id\":
+      \"5343ab54-5f28-45fe-b237-e9094ca20df1\",\n                    \"expectedControlType\":
+      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"\"\n                },\n                {\n                    \"name\": \"jump\",\n
+      \                   \"type\": \"PassThrough\",\n                    \"id\":
+      \"44d3f097-619b-429b-92c0-66e60d6268bc\",\n                    \"expectedControlType\":
+      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"\"\n                },\n                {\n                    \"name\": \"interact\",\n
+      \                   \"type\": \"PassThrough\",\n                    \"id\":
+      \"734acd99-df04-4659-a010-ef4a89206354\",\n                    \"expectedControlType\":
+      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"\"\n                },\n                {\n                    \"name\": \"attack\",\n
+      \                   \"type\": \"PassThrough\",\n                    \"id\":
+      \"fdc051a3-53b4-48e3-ae42-3626603d975e\",\n                    \"expectedControlType\":
+      \"Axis\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"Press\"\n                },\n                {\n                    \"name\":
+      \"heal\",\n                    \"type\": \"Button\",\n                    \"id\":
+      \"8666d784-1aab-4c38-a55a-1f9a51c49348\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"\"\n                },\n                {\n                    \"name\": \"Pause\",\n
+      \                   \"type\": \"Button\",\n                    \"id\": \"1cb545f5-9e43-4fe5-9c43-68a43027c999\",\n
+      \                   \"expectedControlType\": \"\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\"\n                },\n                {\n
+      \                   \"name\": \"DreamDash\",\n                    \"type\":
+      \"Button\",\n                    \"id\": \"2a7d7400-23bb-4d67-95e4-c4586d3c1dee\",\n
+      \                   \"expectedControlType\": \"\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\"\n                }\n            ],\n
+      \           \"bindings\": [\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"06f217dc-2bc4-4df0-81d3-23fb4414da66\",\n
+      \                   \"path\": \"<Joystick>/stick\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"gamePad\",\n                    \"action\": \"Move\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"wasd\",\n                    \"id\":
+      \"3e4771ab-fe0b-4baf-b1db-676e16bda624\",\n                    \"path\": \"2DVector\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"\",\n                    \"action\":
+      \"Move\",\n                    \"isComposite\": true,\n                    \"isPartOfComposite\":
+      false\n                },\n                {\n                    \"name\":
+      \"up\",\n                    \"id\": \"618ed78b-0640-458e-9507-70b88923cdd6\",\n
+      \                   \"path\": \"<Keyboard>/w\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"keybord\",\n                    \"action\": \"Move\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": true\n                },\n
+      \               {\n                    \"name\": \"down\",\n                    \"id\":
+      \"24c7ed5a-8887-4754-815b-e7291a7dd87c\",\n                    \"path\": \"<Keyboard>/s\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
+      \"Move\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      true\n                },\n                {\n                    \"name\": \"left\",\n
+      \                   \"id\": \"628f5222-1199-4ca6-8f12-13e23e9cb6c1\",\n                    \"path\":
+      \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
+      \"Move\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      true\n                },\n                {\n                    \"name\": \"right\",\n
+      \                   \"id\": \"c0d0a84c-c604-4d2b-a2dc-6d8c6cf0c2a7\",\n                    \"path\":
+      \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
+      \"Move\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      true\n                },\n                {\n                    \"name\": \"\",\n
+      \                   \"id\": \"303f6663-9cc8-4077-bd40-58969f9f2521\",\n                    \"path\":
+      \"<Keyboard>/leftShift\",\n                    \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
+      \"sprint\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                },\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"f1e9cdd7-f750-499a-aaad-17368fb18f24\",\n
+      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
+      Core (Plus) Wired Controller>/button11\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"gamePad\",\n                    \"action\": \"sprint\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"c99f61b0-c2b9-4947-93a3-587ca6790dad\",\n                    \"path\": \"<HID::Bensussen
+      Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button2\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"gamePad\",\n                    \"action\": \"jump\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"904daf30-a683-47be-bce9-a7a9527b9e2c\",\n                    \"path\": \"<Keyboard>/w\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
+      \"jump\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                },\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"a4cc67ea-ffd7-42a2-abe8-e3825730baa0\",\n
+      \                   \"path\": \"<Keyboard>/e\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"keybord\",\n                    \"action\": \"interact\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"8ff9134c-eb7f-4aab-998d-aa50b02565f1\",\n                    \"path\": \"<HID::Bensussen
+      Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button3\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"gamePad\",\n                    \"action\": \"interact\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"903913ff-3c94-425e-80e9-25093862e936\",\n                    \"path\": \"<Keyboard>/space\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
+      \"attack\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                },\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"b3f92e68-d8c8-4308-82df-df45f2c4e343\",\n
+      \                   \"path\": \"<Joystick>/trigger\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"attack\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"783bd11e-7d36-4038-bb83-947bd0b6e0d3\",\n                    \"path\": \"<Keyboard>/f\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"\",\n                    \"action\":
+      \"heal\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                },\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"3006cbc8-5c5f-4b5f-b249-7064cdc6b5c8\",\n
+      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
+      Core (Plus) Wired Controller>/button4\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"gamePad\",\n                    \"action\": \"heal\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"3500a0de-f56f-4555-9b04-3147faa621ef\",\n                    \"path\": \"<Keyboard>/escape\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"keybord\",\n                    \"action\":
+      \"Pause\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                },\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"789bcf1b-91ba-453d-ac63-b2500b080339\",\n
+      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
+      Core (Plus) Wired Controller>/button10\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"gamePad\",\n                    \"action\": \"Pause\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"a66a3091-3e27-483c-a466-0b5dddd149e7\",\n                    \"path\": \"<Keyboard>/q\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"\",\n                    \"action\":
+      \"DreamDash\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                },\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"0beaf25a-4325-48dc-9dc3-f4fc0175b27e\",\n
+      \                   \"path\": \"<HID::Bensussen Deutsch & Associates,Inc.(BDA)
+      Core (Plus) Wired Controller>/button8\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"DreamDash\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                }\n
+      \           ]\n        }\n    ],\n    \"controlSchemes\": [\n        {\n            \"name\":
+      \"keybord\",\n            \"bindingGroup\": \"keybord\",\n            \"devices\":
+      [\n                {\n                    \"devicePath\": \"<Keyboard>\",\n
+      \                   \"isOptional\": false,\n                    \"isOR\": false\n
+      \               }\n            ]\n        },\n        {\n            \"name\":
+      \"gamePad\",\n            \"bindingGroup\": \"gamePad\",\n            \"devices\":
+      [\n                {\n                    \"devicePath\": \"<Gamepad>\",\n                    \"isOptional\":
+      false,\n                    \"isOR\": false\n                }\n            ]\n
+      \       }\n    ]\n}"
+    m_IsDirty: 0
+  m_Toolbar:
+    m_IsDirty: 0
+    m_SelectedControlSchemeIndex: -1
+    m_SelectedDeviceRequirementIndex: -1
+    m_ControlSchemes:
+    - m_Name: keybord
+      m_BindingGroup: keybord
+      m_DeviceRequirements:
+      - m_ControlPath: <Keyboard>
+        m_Flags: 0
+    - m_Name: gamePad
+      m_BindingGroup: gamePad
+      m_DeviceRequirements:
+      - m_ControlPath: <Gamepad>
+        m_Flags: 0
+    m_SearchText: 
+  m_DirtyTitle:
+    m_Text: (*) PlayerControls (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Title:
+    m_Text: PlayerControls (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+--- !u!114 &23
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -106493,21 +106650,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Saving and Loading
   m_ViewMode: 1
-  m_StartGridSize: 16
+  m_StartGridSize: 64
   m_LastFolders:
-  - Assets
-  m_LastFoldersGridSize: 16
+  - Assets/Scripts/Saving and Loading
+  m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania
     game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 5a360000
-    m_LastClickedID: 13914
-    m_ExpandedIDs: 000000005a360000043700001e3f0000dc3f0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 0e370000
+    m_LastClickedID: 14094
+    m_ExpandedIDs: 00000000d6360000a03f0000b4a20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -106523,7 +106680,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 13}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -106533,9 +106690,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc3a0000
-    m_LastClickedID: 15052
-    m_ExpandedIDs: ffffffff000000005a3600008a370000ca3a0000dc3f0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000d6360000b4a20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -106560,26 +106717,26 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c6bb0000
-    m_LastClickedInstanceID: 48070
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000863d0000c62c0000d42c0000342d0000242d0000860a0000080a0000ac4e0000200a00000a340000483700009a320000ee330000683200000a470000bc8e000000000000ca3a00003a3a0000
+    m_SelectedInstanceIDs: 62000100
+    m_LastClickedInstanceID: 65634
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AI sword slash
-      m_OriginalName: AI sword slash
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 48068
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -106588,10 +106745,10 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 16
+    m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 192
---- !u!114 &22
+  m_DirectoriesAreaWidth: 200
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106617,7 +106774,7 @@ MonoBehaviour:
     width: 1043
     height: 253
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &23
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106638,10 +106795,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 608
+    x: 1
+    y: 609
     width: 1043
-    height: 253
+    height: 252
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -106698,7 +106855,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &24
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106736,7 +106893,38 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
---- !u!114 &25
+--- !u!114 &27
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f683d99f24875748a6656966ca9cea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 240, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Tile Palette
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1043
+    y: 75
+    width: 369
+    height: 786
+  m_ViewDataDictionary: {fileID: 0}
+  m_PreviewResizer:
+    m_CachedPref: -50
+    m_ControlHash: 1964396721
+    m_PrefName: Preview_TilemapBrushInspector
+  m_Palette: {fileID: 7579899445143659921, guid: ea643be54acad45bab25f451951abb50,
+    type: 3}
+--- !u!114 &28
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106756,9 +106944,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 991
+    x: 1043
     y: 75
-    width: 424
+    width: 369
     height: 786
   m_ViewDataDictionary: {fileID: 0}
   m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
@@ -106771,7 +106959,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &26
+--- !u!114 &29
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106792,9 +106980,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1044
+    x: 1043
     y: 75
-    width: 367
+    width: 369
     height: 786
   m_ViewDataDictionary: {fileID: 0}
   m_PosLeft: {x: 0, y: 0}

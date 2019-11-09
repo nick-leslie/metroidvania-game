@@ -45,8 +45,8 @@ public class WorkingPlayerData : MonoBehaviour
     {
         PlayerData data = SavingScript.loadPlayer();
         _currentBench = data.Currentbench;
-        _currentScene = data.CurrentScene;
-        //_currentScene = 3;
+        //_currentScene = data.CurrentScene;
+        _currentScene = 3;
 
     }
 }

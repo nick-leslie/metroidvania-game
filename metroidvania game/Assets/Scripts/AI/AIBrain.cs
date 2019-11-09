@@ -14,10 +14,6 @@ public class AIBrain : MonoBehaviour
     private int damage;
     private HealthMainiger heath;
     private Color ogcolor;
-    [SerializeField]
-    private float knockback;
-    [SerializeField]
-    private float knockbackDuration;
     public bool tookDmg=false;
     [SerializeField]
     private float _attackRad;
@@ -58,14 +54,6 @@ public class AIBrain : MonoBehaviour
                 damage = value;
             }
         }
-    }
-    public float KnockbackDuration
-    {
-        get { return knockbackDuration; }
-    }
-    public float KnockBack
-    {
-        get { return knockback; }
     }
     public float attackrad
     {

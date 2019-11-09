@@ -71,9 +71,10 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Input\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\AI\AIBrain.cs" />
-    <Compile Include="Assets\Scripts\AI\AiCombat.cs" />
-    <Compile Include="Assets\Scripts\AI\DamagePlayerOnColition.cs" />
-    <Compile Include="Assets\Scripts\AI\FLyingPAthfinding.cs" />
+    <Compile Include="Assets\Scripts\AI\Combat Reusable\AiCombat.cs" />
+    <Compile Include="Assets\Scripts\AI\Combat Reusable\DamagePlayerOnColition.cs" />
+    <Compile Include="Assets\Scripts\AI\FlyingEnemys\FLyingPAthfinding.cs" />
+    <Compile Include="Assets\Scripts\AI\GroundEnemyPathfinding.cs" />
     <Compile Include="Assets\Scripts\cammraControler.cs" />
     <Compile Include="Assets\Scripts\circalShrinking.cs" />
     <Compile Include="Assets\Scripts\Enviorment\jumpStar.cs" />
