@@ -8,6 +8,8 @@ public class HealthUI : MonoBehaviour
     private Image[] healthsprites; 
     private GameObject player;
     private HealthMainiger hpm;
+    [SerializeField]
+    private float filltime;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +28,30 @@ public class HealthUI : MonoBehaviour
     {
         for (int i = 0; i < healthsprites.Length; i++)
         {
-            if( hpm.Health > i )
+            if(hpm.Health > i)
             {
-                healthsprites[i].color = Color.white;
+                StartCoroutine(increceAmount(healthsprites[i]));
             }
             else
             {
-                healthsprites[i].color = Color.gray;
+                StartCoroutine(decreceAmount(healthsprites[i]));
             }
+        }
+    }
+    IEnumerator decreceAmount(Image healthsprite)
+    {
+        while (healthsprite.fillAmount>0)
+        {
+            healthsprite.fillAmount -= filltime;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+    IEnumerator increceAmount(Image healthsprite)
+    {
+        while (healthsprite.fillAmount < 1)
+        {
+            healthsprite.fillAmount += filltime;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

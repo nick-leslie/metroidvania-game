@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class HealthMainiger : MonoBehaviour
 { 
+    [SerializeField]
     private int _Health;
     [SerializeField]
     private int MaxHealth;

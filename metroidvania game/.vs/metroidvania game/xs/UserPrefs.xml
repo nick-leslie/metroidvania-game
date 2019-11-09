@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{E00A1E57-BA37-A34D-7A6C-0338048962ED}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AI/GroundEnemyPathfinding.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/health/HealthMainiger.cs">
     <Files>
-      <File FileName="Assets/Scripts/AI/AIBrain.cs" Line="80" Column="6" />
-      <File FileName="Assets/Scripts/AI/GroundEnemyPathfinding.cs" Line="27" Column="19" />
-      <File FileName="Assets/Scripts/AI/FlyingEnemys/FLyingPAthfinding.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AI/Combat Reusable/AiCombat.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AI/AIBrain.cs" Line="57" Column="6" />
+      <File FileName="Assets/Scripts/AI/GroundEnemyPathfinding.cs" Line="50" Column="24" />
+      <File FileName="Assets/Scripts/AI/FlyingEnemys/FLyingPAthfinding.cs" Line="15" Column="18" />
+      <File FileName="Assets/Scripts/AI/Combat Reusable/AiCombat.cs" Line="23" Column="46" />
+      <File FileName="Assets/Scripts/Player/health/HealthUI.cs" Line="31" Column="28" />
+      <File FileName="Assets/Scripts/Player/health/HealthMainiger.cs" Line="7" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
