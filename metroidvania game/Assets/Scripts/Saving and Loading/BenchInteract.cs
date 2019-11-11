@@ -21,13 +21,13 @@ public class BenchInteract : MonoBehaviour
         {
             pData = GameObject.FindWithTag("Player").GetComponent<WorkingPlayerData>();
         }
-       // SceneNumber = SceneManager.GetActiveScene().buildIndex;
+        SceneNumber = SceneManager.GetActiveScene().buildIndex;
 
     }
     // Update is called once per frame
     void Update()
     {
-      //  SceneNumber = SceneManager.GetActiveScene().buildIndex;
+        SceneNumber = SceneManager.GetActiveScene().buildIndex;
     }
     private void OnTriggerStay2D(Collider2D other)
     {

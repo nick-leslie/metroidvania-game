@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d623cc6df110d482f969f4753848f695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Health: 0
   MaxHealth: 3
   maxPosible: 3
   Itime: 0
@@ -144,8 +145,6 @@ MonoBehaviour:
   maxSpeed: 2
   player: {fileID: 0}
   MaxDamage: 1
-  knockback: 400
-  knockbackDuration: 0.2
   tookDmg: 0
   _attackRad: 2
   attackWaitTime: 2
@@ -169,7 +168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4018264491749025272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ee8b0cd8d5244218817c2c374eb7ec4, type: 3}
   m_Name: 
@@ -306,17 +305,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7900096913122515139, guid: 48a53d8508bd7486e8479ee1ac2fca25,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3da5ae620a564121b869af18df82558, type: 2}
     - target: {fileID: 7962024838136489945, guid: 48a53d8508bd7486e8479ee1ac2fca25,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5207231776682384544, guid: 3ff394d6c827942d89c91ff0a50360be,
         type: 3}
-    - target: {fileID: 7900096913122515139, guid: 48a53d8508bd7486e8479ee1ac2fca25,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e3da5ae620a564121b869af18df82558, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48a53d8508bd7486e8479ee1ac2fca25, type: 3}
 --- !u!1 &3957552998377332015 stripped

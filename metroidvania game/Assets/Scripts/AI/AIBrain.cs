@@ -66,7 +66,7 @@ public class AIBrain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        findP();
         speed = maxSpeed;
         damage = MaxDamage;
         heath = gameObject.GetComponent<HealthMainiger>();
@@ -91,6 +91,10 @@ public class AIBrain : MonoBehaviour
     public void die() 
     {
         Destroy(gameObject);
+    }
+   public  void findP()
+    {
+        player = GameObject.FindWithTag("Player");
     }
     private IEnumerator dammag()
     {
