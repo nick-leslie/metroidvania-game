@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class LoadingPositionManiger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameObject player;
+    private WorkingPlayerData Pdata;
+    private void OnEnable()
     {
-        
+        player = GameObject.FindWithTag("Player");
+        Pdata = player.GetComponent<WorkingPlayerData>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void positionToBench()
     {
-        
+        int rightBench = 0;
+        GameObject[] benches = GameObject.FindGameObjectsWithTag("Bench");
+        for (int i = 0; i < benches.Length; i++)
+        {
+            if (benches[i].GetComponent<BenchInteract>().benchNumber == Pdata.CurrentBench)
+            {
+                rightBench = i;
+                player.transform.position = benches[i].transform.position;
+            }
+        }
     }
 }
