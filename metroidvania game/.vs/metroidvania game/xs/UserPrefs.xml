@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{E00A1E57-BA37-A34D-7A6C-0338048962ED}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControlerDiscover.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PauseMenu.cs">
     <Files>
       <File FileName="Assets/Scripts/sceanStuff/OldSceneMangment/LoadScene.cs" Line="27" Column="43" />
       <File FileName="Assets/Scripts/sceanStuff/New Scene maniger/LoadingPositionManiger.cs" Line="29" Column="1" />
@@ -8,6 +8,7 @@
       <File FileName="Assets/Scripts/Player/DreamDash.cs" Line="65" Column="106" />
       <File FileName="Assets/Scripts/Player/Movement/Jump.cs" Line="88" Column="1" />
       <File FileName="Assets/Scripts/ControlerDiscover.cs" Line="10" Column="8" />
+      <File FileName="Assets/Scripts/PauseMenu.cs" Line="50" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
