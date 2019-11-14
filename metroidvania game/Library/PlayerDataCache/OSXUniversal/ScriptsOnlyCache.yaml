@@ -2,25 +2,30 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AIBrain
+    - AiCombat
     - Attack
     - BenchInteract
     - CammraShake
+    - ControlerDiscover
     - DamagePlayerOnColition
     - DreamDash
     - FLyingPAthfinding
+    - GroundEnemyPathfinding
     - HealthMainiger
     - HealthUI
     - Jump
     - LoadScene
+    - LoadingPositionManiger
     - Movement
     - PauseMenu
-    - SceneManiger
+    - SceneManigerBace
     - WorkingPlayerData
     - cammraControler
     - circalShrinking
     - fallRespawnPos
     - findCamra
     - heal
+    - interactaveLoad
     - jumpStar
     - lifeTime
     - respawn
@@ -80,6 +85,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -89,31 +100,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 11132}
+      Script: {instanceID: 11134}
     - Class: 114
-      Script: {instanceID: 11212}
+      Script: {instanceID: 11214}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12202}
     - Class: 114
-      Script: {instanceID: 12812}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 12948}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 12994}
     - Class: 114
-      Script: {instanceID: 13288}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13702}
+      Script: {instanceID: 13296}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13712}
+    - Class: 114
+      Script: {instanceID: 13752}
+    - Class: 114
+      Script: {instanceID: 13844}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -180,51 +195,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10760}
+      Script: {instanceID: 10522}
     - Class: 114
-      Script: {instanceID: 11060}
+      Script: {instanceID: 10762}
     - Class: 114
-      Script: {instanceID: 11132}
+      Script: {instanceID: 11062}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11134}
     - Class: 114
-      Script: {instanceID: 11380}
+      Script: {instanceID: 11186}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11382}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12000}
+      Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 12032}
+      Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 12110}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12444}
     - Class: 114
-      Script: {instanceID: 12464}
+      Script: {instanceID: 12466}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12476}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12526}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12824}
     - Class: 114
-      Script: {instanceID: 12948}
+      Script: {instanceID: 12894}
     - Class: 114
-      Script: {instanceID: 13120}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 13294}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13348}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 13702}
+      Script: {instanceID: 13356}
     - Class: 114
-      Script: {instanceID: 13874}
+      Script: {instanceID: 13712}
+    - Class: 114
+      Script: {instanceID: 13884}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -260,6 +277,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -267,23 +290,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12202}
     - Class: 114
-      Script: {instanceID: 12812}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 12948}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 13288}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13296}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13752}
+    - Class: 114
+      Script: {instanceID: 13844}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -301,6 +326,114 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/thank you.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9836}
+    - Class: 114
+      Script: {instanceID: 11134}
+    - Class: 114
+      Script: {instanceID: 12444}
+    - Class: 114
+      Script: {instanceID: 12824}
+    - Class: 114
+      Script: {instanceID: 12952}
+    - Class: 114
+      Script: {instanceID: 13712}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/v slise lv.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 66
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 724}
+    - Class: 114
+      Script: {instanceID: 11214}
+    - Class: 114
+      Script: {instanceID: 12816}
+    - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 114
+      Script: {instanceID: 13042}
+    - Class: 114
+      Script: {instanceID: 13216}
+    - Class: 114
+      Script: {instanceID: 13296}
+    - Class: 114
+      Script: {instanceID: 13330}
+    - Class: 114
+      Script: {instanceID: 13656}
+    - Class: 114
+      Script: {instanceID: 13844}
+    - Class: 114
+      Script: {instanceID: 20874}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -495,6 +628,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessProfile
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadingPositionManiger
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -809,7 +948,7 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
-      Hash: 69cf90901f75b2c513109dd7e9c17c63
+      Hash: d5d852fd55673b3ed9de3c0778b94b8c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DreamDash
@@ -845,7 +984,7 @@ ScriptsOnlyBuild:
     className: DownloadableSample
   - hash:
       serializedVersion: 2
-      Hash: 8981be3dc0719bf32b17438b04f9559a
+      Hash: 45b5dc3635bd8532e11d855b6b408f9d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthUI
@@ -941,6 +1080,12 @@ ScriptsOnlyBuild:
     className: fallRespawnPos
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneManigerBace
+  - hash:
+      serializedVersion: 2
       Hash: a64b8ff703a69f3352c424e9d0bc1c49
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering
@@ -1007,10 +1152,22 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 476e5362b200f81ccf0328af33e4ce64
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: interactaveLoad
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: f2e2684022b68ef53407f6a725a2b18f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AiCombat
   - hash:
       serializedVersion: 2
       Hash: c46b2778bfe1719f69095b33139359c0
@@ -1019,7 +1176,7 @@ ScriptsOnlyBuild:
     className: Attack
   - hash:
       serializedVersion: 2
-      Hash: 44a75b1114fbbce839e96ef3a5d6965c
+      Hash: 4f484d82443e0d4b0176f0333aa7ff2f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthMainiger
@@ -1121,6 +1278,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: b2f2ed750bd94f66c06d136a8827049f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GroundEnemyPathfinding
+  - hash:
+      serializedVersion: 2
       Hash: 20eeaeae829475b5e354d1f626c51a2b
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -1181,7 +1344,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 8307e14d513a596273fd4fb31086fc2d
+      Hash: 10b7f5bdeb2e4dcc503be04403b71576
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AIBrain
@@ -1203,10 +1366,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ControlerDiscover
   platform: 2
   scenePathNames:
   - Assets/Scenes/percistenScean.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/testScene.unity
+  - Assets/Scenes/v slise lv.unity
+  - Assets/Scenes/thank you.unity
   playerPath: /Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania
-    game/unnamed metrodvania alfa 1.app
+    game/dreamer pre alpha1.app

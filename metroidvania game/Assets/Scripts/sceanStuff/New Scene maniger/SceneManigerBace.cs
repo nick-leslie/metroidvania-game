@@ -8,10 +8,12 @@ public class SceneManigerBace : MonoBehaviour
     private int baceScene = 0;
     private GameObject player;
     private WorkingPlayerData Pdata;
+    private LoadingPositionManiger posManager;
     private void OnEnable()
     {
         player = GameObject.FindWithTag("Player");
         Pdata = player.GetComponent<WorkingPlayerData>();
+        posManager = gameObject.GetComponent<LoadingPositionManiger>();
     }
 
     //this is the bace load profile
@@ -62,6 +64,7 @@ public class SceneManigerBace : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.SetActiveScene(scene);
+        StartCoroutine(posManager.positionToBench());
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

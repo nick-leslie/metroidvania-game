@@ -11,9 +11,10 @@ public class LoadingPositionManiger : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         Pdata = player.GetComponent<WorkingPlayerData>();
     }
-    void positionToBench()
+   public IEnumerator positionToBench()
     {
         int rightBench = 0;
+        yield return new WaitForSeconds(0.5f);
         GameObject[] benches = GameObject.FindGameObjectsWithTag("Bench");
         for (int i = 0; i < benches.Length; i++)
         {

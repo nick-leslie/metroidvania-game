@@ -65,7 +65,7 @@
                     "name": "DreamDash",
                     "type": "Button",
                     "id": "2a7d7400-23bb-4d67-95e4-c4586d3c1dee",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -75,6 +75,17 @@
                     "name": "",
                     "id": "06f217dc-2bc4-4df0-81d3-23fb4414da66",
                     "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamePad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "970d359d-e964-4430-bdb9-aa494ace1c71",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "gamePad",
@@ -140,7 +151,7 @@
                 {
                     "name": "",
                     "id": "303f6663-9cc8-4077-bd40-58969f9f2521",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "keybord",
@@ -151,7 +162,7 @@
                 {
                     "name": "",
                     "id": "f1e9cdd7-f750-499a-aaad-17368fb18f24",
-                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button11",
+                    "path": "<Gamepad>/rightStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "gamePad",
@@ -162,7 +173,7 @@
                 {
                     "name": "",
                     "id": "c99f61b0-c2b9-4947-93a3-587ca6790dad",
-                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button2",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "gamePad",
@@ -183,6 +194,17 @@
                 },
                 {
                     "name": "",
+                    "id": "3b49bb8d-e89f-41d5-be8b-e877f8c6f95c",
+                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamePad",
+                    "action": "jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a4cc67ea-ffd7-42a2-abe8-e3825730baa0",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -195,6 +217,17 @@
                 {
                     "name": "",
                     "id": "8ff9134c-eb7f-4aab-998d-aa50b02565f1",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamePad",
+                    "action": "interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4f61107-0271-4b08-9eb7-a073520dbb59",
                     "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button3",
                     "interactions": "",
                     "processors": "",
@@ -217,10 +250,21 @@
                 {
                     "name": "",
                     "id": "b3f92e68-d8c8-4308-82df-df45f2c4e343",
-                    "path": "<Joystick>/trigger",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "gamePad",
+                    "action": "attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48c8530f-51aa-4b88-ad6b-3efcc9eae30b",
+                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamePad",
                     "action": "attack",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -239,10 +283,21 @@
                 {
                     "name": "",
                     "id": "3006cbc8-5c5f-4b5f-b249-7064cdc6b5c8",
-                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button4",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "gamePad",
+                    "action": "heal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e00395e3-a02e-4575-be1c-edec70922b74",
+                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "heal",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -261,7 +316,7 @@
                 {
                     "name": "",
                     "id": "789bcf1b-91ba-453d-ac63-b2500b080339",
-                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button10",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "gamePad",
@@ -271,8 +326,19 @@
                 },
                 {
                     "name": "",
+                    "id": "cceb78ec-5f72-4b8f-a8bc-850dd4376ad3",
+                    "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a66a3091-3e27-483c-a466-0b5dddd149e7",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -283,6 +349,17 @@
                 {
                     "name": "",
                     "id": "0beaf25a-4325-48dc-9dc3-f4fc0175b27e",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DreamDash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e1bd1d2-bf31-49d2-bc8d-32af33147524",
                     "path": "<HID::Bensussen Deutsch & Associates,Inc.(BDA) Core (Plus) Wired Controller>/button8",
                     "interactions": "",
                     "processors": "",

@@ -19,6 +19,9 @@ public class DreamDash : MonoBehaviour
     [SerializeField]
     private float CoolDown;
     private bool CanDash=true;
+    private RaycastHit2D checkHit;
+    [SerializeField]
+    private LayerMask whatToCollideWith;
     //commbat
     [SerializeField]
     private Vector2 HitBoxSize;
@@ -28,6 +31,7 @@ public class DreamDash : MonoBehaviour
     //geting componets
     private Movement move;
     private HealthMainiger hp;
+
     private void Awake()
     {
         control = new PlayerControls();
@@ -58,17 +62,26 @@ public class DreamDash : MonoBehaviour
     }
     private void Update()
     {
+        checkHit = Physics2D.Raycast(transform.position, storedDrie * Vector3.right,1,whatToCollideWith);
         if (dash)
         {
             rb.velocity = Vector2.zero;
-            transform.Translate(storedDrie*dashDistence * Time.deltaTime, 0, 0);
+            if (checkHit.collider == null)
+            {
+                transform.Translate(storedDrie * dashDistence * Time.deltaTime, 0, 0);
+            }
+            else
+            {
+                dash = false;
+                return;
+            }
             Collider2D[] enemysToDmg = Physics2D.OverlapBoxAll(transform.position + (storedDrie * Vector3.right), HitBoxSize, 0);
             for (int i = 0; i < enemysToDmg.Length; i++)
             {
-                if(enemysToDmg[i].CompareTag("Enemy"))
+                if (enemysToDmg[i].CompareTag("Enemy"))
                 {
                     enemysToDmg[i].gameObject.GetComponent<AIBrain>().takeDamage(Damage);
-                    enemysToDmg[i].gameObject.GetComponent<AIBrain>().tookDmg=true;
+                    enemysToDmg[i].gameObject.GetComponent<AIBrain>().tookDmg = true;
                     enemys.Add(enemysToDmg[i].gameObject);
                 }
             }

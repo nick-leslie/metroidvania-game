@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/v slise lv.unity
     guid: ff48fdacaf221495b9f1a77f4453d866
+  - enabled: 1
+    path: Assets/Scenes/thank you.unity
+    guid: 826ca71b05a36497d885c053e1158e07
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 42db52df993554d7d9c7cfd022524453,
       type: 2}
