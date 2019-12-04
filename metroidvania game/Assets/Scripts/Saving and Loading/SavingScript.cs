@@ -16,6 +16,7 @@ public static class SavingScript
     public static PlayerData loadPlayer()
     {
         string path = Application.persistentDataPath + "/SaveData.Demo";
+        Debug.Log(path);
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

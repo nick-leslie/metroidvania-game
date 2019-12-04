@@ -32,10 +32,7 @@ public class WorkingPlayerData : MonoBehaviour
             }
         }
     }
-    private void Start()
-    {
-
-    }
+    public bool firstRun;
     public void savePlayer()
     {
         Debug.Log("saving");
@@ -46,7 +43,12 @@ public class WorkingPlayerData : MonoBehaviour
         PlayerData data = SavingScript.loadPlayer();
         _currentBench = data.Currentbench;
         _currentScene = data.CurrentScene;
-        //_currentScene = 3;
 
+    }
+    public void createSave()
+    {
+            _currentScene = 3;
+            _currentBench = 1;
+            SavingScript.savePlayer(this);
     }
 }

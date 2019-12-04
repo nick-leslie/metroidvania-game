@@ -18,7 +18,7 @@ public class Jump : MonoBehaviour
     public bool canJump=true;
     [SerializeField]
     private float maxjumpVelocity;
-    public bool betterjump=true;
+    public bool fastFallToggle;
     private float gravity;
     private float jumpVelocity;
     [SerializeField]
@@ -43,15 +43,17 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FixedUpdate();
+        if (fastFallToggle ==false)
+        {
             if (rb.velocity.y < 0)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplayer - 1) * Time.deltaTime;
             }
-            else if (rb.velocity.y > 0 && jumpInput<1)
+            else if (rb.velocity.y > 0 && jumpInput < 1)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (LowJumpMultiplyer - 1) * Time.deltaTime;
             }
+        }
     }
     void FixedUpdate()
     {
@@ -60,10 +62,11 @@ public class Jump : MonoBehaviour
             if (canJump)
             {
                 rb.velocity = Vector2.up * jumpForce;
-               // rb.velocity += Vector2.up *jumpVelocity;
-               // rb.AddForce(Vector2.up * jumpVelocity,ForceMode2D.Impulse);
+                // rb.velocity += Vector2.up *jumpVelocity;
+                // rb.AddForce(Vector2.up * jumpVelocity,ForceMode2D.Impulse);
                 //  rb.velocity = new Vector2(rb.velocity.x, 0);
                 // rb.velocity += Vector2.up * jumpForce;
+                //rb.AddForce(transform.TransformDirection(Vector3.up) * Time.deltaTime * jumpForce, ForceMode2D.Impulse);
                 canJump = false;
             }
         }
