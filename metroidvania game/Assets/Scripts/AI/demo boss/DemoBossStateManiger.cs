@@ -6,6 +6,8 @@ public class DemoBossStateManiger : MonoBehaviour
     //state managment--------------------------------
     enum states{lazers,homingBalls,weakState,idle};
     private states currentState = states.lazers;
+    [SerializeField]
+    private int MaxStates;
     //-----------------------------------------------
     [SerializeField]
     private GameObject[] spawnPositions;
@@ -20,6 +22,8 @@ public class DemoBossStateManiger : MonoBehaviour
     private float LazerDistence;
     [SerializeField]
     private LayerMask lazerThingsToHit;
+    [SerializeField]
+    private int LazerTimeInState;
     void Start()
     {
         int children = transform.childCount;
@@ -50,20 +54,40 @@ public class DemoBossStateManiger : MonoBehaviour
     private void Handlelazers() 
     {
         transform.Rotate(new Vector3(0,0,1) * (rotationRate * Time.deltaTime));
-        for (int j = 0; j < spawnPositions.Length; j++)
-        {
-            Vector3 dire = spawnPositions[j].transform.position - transform.position;
-            spawnPositions[j].transform.GetChild(0).transform.localPosition = dire;
-        }
         for (int i = 0; i < spawnPositions.Length; i++)
         {
             Vector3 dire = spawnPositions[i].transform.position - transform.position;
-            lazers[i] = Physics2D.Raycast(spawnPositions[i].transform.position, dire, LazerDistence,lazerThingsToHit);
-            Debug.DrawRay(spawnPositions[i].transform.position,dire * LazerDistence, Color.blue);
-           // spawnPositions[i].GetComponent<LineRenderer>().positionCount = 2;
-            //spawnPositions[i].GetComponent<LineRenderer>().SetPosition(0,transform.position);
-            //spawnPositions[i].GetComponent<LineRenderer>().SetPosition(1, lazers[i].point);
-
+            lazers[i] = Physics2D.Raycast(spawnPositions[i].transform.position, dire,LazerDistence,lazerThingsToHit);
+            Debug.DrawLine(spawnPositions[i].transform.position, lazers[i].point, color: Color.blue);
+            spawnPositions[i].GetComponent<LineRenderer>().positionCount = 2;
+            spawnPositions[i].GetComponent<LineRenderer>().SetPosition(0,spawnPositions[i].transform.position);
+            spawnPositions[i].GetComponent<LineRenderer>().SetPosition(1, lazers[i].point);
+        }
+        //StartCoroutine(SwitchStates(LazerTimeInState));
+    }
+    IEnumerator SwitchStates(int TimeInState)
+    {
+        int TimeLeft = 0;
+        while (TimeLeft<=TimeInState)
+        {
+            yield return new WaitForSeconds(1);
+            TimeLeft++;
+        }
+        switch (currentState)
+        {
+            case states.idle:
+                currentState = states.lazers;
+                break;
+            case states.lazers:
+               currentState=states.homingBalls;
+                break;
+            case states.homingBalls:
+                currentState = states.weakState;
+                break;
+            case states.weakState:
+                currentState = states.idle;
+                break;
         }
     }
 }
+    

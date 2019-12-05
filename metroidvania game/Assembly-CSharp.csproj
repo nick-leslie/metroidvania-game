@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\sceanStuff\New Scene maniger\SceneManigerBace.cs" />
     <Compile Include="Assets\Scripts\sceanStuff\OldSceneMangment\LoadScene.cs" />
     <Compile Include="Assets\Scripts\sceanStuff\OldSceneMangment\SceneManiger.cs" />
+    <Compile Include="Assets\TestTheLIneRender.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
