@@ -444,14 +444,14 @@ GameObject:
   - component: {fileID: 4969393754881720895}
   - component: {fileID: 4969393754881720892}
   - component: {fileID: 4969393754881720893}
-  - component: {fileID: 4969393754881720890}
-  - component: {fileID: 4969393754881720891}
+  - component: {fileID: 1983307926225402735}
+  - component: {fileID: 5212314667941811242}
   - component: {fileID: 4969393754881720888}
   - component: {fileID: 4969393754881720889}
-  - component: {fileID: 4969393754881720886}
   - component: {fileID: 4969393754881720887}
   - component: {fileID: 4969393754881720884}
   - component: {fileID: 4969393754881720885}
+  - component: {fileID: 871374360289309338}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -574,7 +574,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4969393754881720890
+--- !u!114 &1983307926225402735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -583,38 +583,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 4969393754881720882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9eda0e5d61c9444eb2c2110719cb597, type: 3}
+  m_Script: {fileID: 11500000, guid: 23272510641a741158252206e7922036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprintSpeedMax: 900
-  sprintIncreceOvertime: 450
-  walkspeed: 500
-  movespeed: 0
+  horizontalRayCount: 4
+  verticalRayCount: 4
+  whatToCol:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &5212314667941811242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969393754881720882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6869a293c8d8464baf0d9869ae72b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 4
+  timeToJumpApex: 0.4
   moveInput: {x: 0, y: 0}
---- !u!114 &4969393754881720891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4969393754881720882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a21ea94e11bb4641a76774367ac3569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 12
-  fallMultiplayer: 6
-  LowJumpMultiplyer: 4
-  dustPartical: {fileID: 831537367047845964, guid: 55e6f6573203b4105b9e406261322dca,
-    type: 3}
-  particalSpawnPos: {fileID: 4969393756933267906}
-  canJump: 1
-  maxjumpVelocity: 12
-  betterjump: 1
-  jumpHeight: 0.7
-  timeToJumpApex: 0.09
-  IsGrounded: 0
+  velocity: {x: 0, y: 0, z: 0}
+  moveSpeed: 0
+  applyGrav: 1
 --- !u!114 &4969393754881720888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,23 +647,7 @@ MonoBehaviour:
   slash: {fileID: 4969393754830711576}
   dammage: 1
   deadzone: 0.7
---- !u!114 &4969393754881720886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4969393754881720882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2988f888c4f6d415c8b861899e6c7bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashDistence: 40
-  dashTime: 0.2
-  CoolDown: 0.8
-  HitBoxSize: {x: 3, y: 5}
-  Damage: 2
+  forceAplydTime: 0
 --- !u!114 &4969393754881720887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d623cc6df110d482f969f4753848f695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Health: 0
   MaxHealth: 4
   maxPosible: 4
   Itime: 2
@@ -699,6 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthsprites: []
+  filltime: 0
 --- !u!114 &4969393754881720885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,6 +694,27 @@ MonoBehaviour:
   _currentBench: 0
   MaxBenchNum: 3
   _currentScene: 0
+  firstRun: 0
+--- !u!114 &871374360289309338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969393754881720882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d369cbf3f81b4b0ea45b69a9e378a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashDistence: 30
+  dashTime: 0.2
+  CoolDown: 0.8
+  whatToCollideWith:
+    serializedVersion: 2
+    m_Bits: 23
+  HitBoxSize: {x: 3.06, y: 5.94}
+  Damage: 2
 --- !u!1 &4969393754964475896
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insidecercal: {fileID: 4969393756811752193}
+  healing: 0
   shrinkSpeedMod: 0.3
 --- !u!1 &4969393754995343312
 GameObject:

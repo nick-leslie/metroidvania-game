@@ -38,7 +38,6 @@ public class BenchInteract : MonoBehaviour
                 pData.CurrentBench = benchNumber;
                 pData.CurrentScene = SceneNumber;
                 pData.savePlayer();
-                Debug.Log("whow ya");
                 StartCoroutine(timeTillInteraction());
                 interacted = true;
             }

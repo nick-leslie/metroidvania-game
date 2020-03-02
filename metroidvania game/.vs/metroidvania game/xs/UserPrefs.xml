@@ -1,22 +1,54 @@
 ﻿<Properties StartupConfiguration="{E00A1E57-BA37-A34D-7A6C-0338048962ED}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AI/demo boss/DemoBossStateManiger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Movement/old movment/Jump.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/Movement/Jump.cs" Line="46" Column="35" />
-      <File FileName="Assets/Scripts/Player/Movement/DreamDash.cs" Line="9" Column="12" />
-      <File FileName="Assets/Scripts/AI/AIBrain.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AI/demo boss/DemoBossStateManiger.cs" Line="64" Column="104" />
-      <File FileName="Assets/TestTheLIneRender.cs" Line="21" Column="55" />
-      <File FileName="Assets/Scripts/Saving and Loading/BenchInteract.cs" Line="58" Column="1" />
-      <File FileName="Assets/Scripts/sceanStuff/OldSceneMangment/LoadScene.cs" Line="53" Column="1" />
+      <File FileName="Assets/Scripts/sceanStuff/OldSceneMangment/LoadScene.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/fallRespawnPos.cs" Line="26" Column="73" />
+      <File FileName="Assets/Scripts/Player/Movement/DreamDash.cs" />
+      <File FileName="Assets/Scripts/Player/health/heal.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/Movement/CharicterControlerBace.cs" />
+      <File FileName="Assets/Scripts/Player/Attack.cs" Line="135" Column="1" />
+      <File FileName="Assets/Scripts/Player/Movement/Player.cs" Line="36" Column="76" />
+      <File FileName="Assets/Scripts/AI/demo boss/DemoBossStateManiger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/cammraControler.cs" />
+      <File FileName="Assets/Scripts/PauseMenu.cs" Line="50" Column="1" />
+      <File FileName="Assets/Scripts/Player/Movement/old movment/Jump.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="metroidvania game" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Input" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="AI" expanded="True">
+                  <Node name="Combat Reusable" expanded="True" />
+                  <Node name="demo boss" expanded="True" />
+                  <Node name="FlyingEnemys" expanded="True" />
+                </Node>
+                <Node name="Enviorment" expanded="True" />
+                <Node name="Player" expanded="True">
+                  <Node name="health" expanded="True" />
+                  <Node name="Movement" expanded="True">
+                    <Node name="old movment" expanded="True">
+                      <Node name="Jump.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="sceanStuff" expanded="True">
+                  <Node name="OldSceneMangment" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="57ae7870-04b7-4a33-aaa1-b64199a63c3c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/nickleslie/Desktop/game desine/metroidvania-game/metroidvania game/Assets/Scripts/AI/FlyingEnemys/FLyingPAthfinding.cs" relfile="Assets/Scripts/AI/FlyingEnemys/FLyingPAthfinding.cs" line="45" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

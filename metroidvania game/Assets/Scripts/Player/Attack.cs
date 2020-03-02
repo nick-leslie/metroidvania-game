@@ -24,6 +24,9 @@ public class Attack : MonoBehaviour
     [SerializeField]
     private float deadzone;
     private float lastDire;
+    CharicterControlerBace controler;
+    Player p;
+    public float forceAplydTime;
     // this varuable is for further keeping track of last input for nutral press cases
     //true is for up and false is for down 
     private bool lrudDire;
@@ -38,6 +41,8 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        controler = gameObject.GetComponent<CharicterControlerBace>();
+        p = gameObject.GetComponent<Player>();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -74,7 +79,7 @@ public class Attack : MonoBehaviour
                 {
                     Vector3 goodVec;
                     string goodString;
-                    if(lrudDire) 
+                    if (lrudDire)
                     {
                         goodVec = Vector3.up;
                         goodString = "ver";
@@ -105,103 +110,109 @@ public class Attack : MonoBehaviour
         {
             for (int i = 0; i < enmeystoDamage.Length; i++)
             {
-               if(enmeystoDamage[i].gameObject.GetComponent<AIBrain>() != null)
+                if (enmeystoDamage[i].gameObject.GetComponent<AIBrain>() != null)
                 {
                     enmeystoDamage[i].gameObject.GetComponent<AIBrain>().takeDamage(dammage);
                 }
             }
-            backforce(vec, dire);
+            StartCoroutine(backforce(vec, dire));
             canatack = false;
         }
     }
     /// <summary>
     /// force in the posidt direction
     /// </summary>
-    private void backforce(Vector3 vectorDirection, float type)
+    private IEnumerator backforce(Vector3 vectorDirection, float type)
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, vectorDirection * type, Mathf.Infinity, whattohit);
         Debug.DrawRay(transform.position, vectorDirection * type, color: Color.blue, radis);
         if (hit.collider != null)
         {
             rb.velocity = Vector3.zero;
-            Vector3 hitpos = new Vector3(hit.point.x, hit.point.y, transform.position.z);
-            Vector2 dire = transform.position - hitpos;
-            rb.AddRelativeForce(dire.normalized * force,ForceMode2D.Impulse);
+            for (int i = 0; i < forceAplydTime; i++)
+            {
+                p.velocity = ((AttackDire * vectorDirection)*-1) * force * Time.deltaTime;
+                Debug.Log(vectorDirection);
+                p.applyGrav = false;
+                controler.Move(p.velocity);
+                yield return new WaitForSeconds(0.1f);
+                p.applyGrav = true;
+            }
         }
     }
     //-------------------------------
-    /// <summary>
-    /// sets the dirdection of the slash
-    /// </summary>
+    // <summary>
+    // sets the dirdection of the slash
+    // </summary>
     private void slashdire(string state, float dire)
-{
-    if (state == "ver")
     {
-        if (dire > 0)
+        if (state == "ver")
         {
-            slashcode(90);
+            if (dire > 0)
+            {
+                slashcode(90);
+            }
+            else if (dire < 0)
+            {
+                slashcode(270);
+            }
         }
-        else if (dire < 0)
+        else if (state == "hor")
         {
-            slashcode(270);
+            if (dire > 0)
+            {
+                slashcode(0);
+            }
+            else if (dire < 0)
+            {
+                slashcode(180);
+            }
         }
-    }
-    else if (state == "hor")
-    {
-        if (dire > 0)
-        {
-            slashcode(0);
-        }
-        else if (dire < 0)
-        {
-            slashcode(180);
-        }
-    }
 
-}
-/// <summary>
-/// exsacutes the slash
-/// </summary>
-private void slashcode(float angle)
-{
-    if (slash.activeSelf == false)
-    {
-        slash.SetActive(true);
     }
-    else
+    /// <summary>
+    /// exsacutes the slash
+    /// </summary>
+    private void slashcode(float angle)
     {
-        slash.GetComponent<Animator>().SetBool("active", true);
+        if (slash.activeSelf == false)
+        {
+            slash.SetActive(true);
+        }
+        else
+        {
+            slash.GetComponent<Animator>().SetBool("active", true);
+        }
+        slash.transform.rotation = Quaternion.Euler(0, 0, angle);
+        slash.GetComponent<Animator>().SetBool("active", false);
+        StartCoroutine(waitTillAnimDone());
     }
-    slash.transform.rotation = Quaternion.Euler(0, 0, angle);
-    slash.GetComponent<Animator>().SetBool("active", false);
-    StartCoroutine(waitTillAnimDone());
-}
-/// <summary>
-/// Waits  till animation done.
-/// </summary>
-private IEnumerator waitTillAnimDone()
-{
+    /// <summary>
+    /// Waits  till animation done.
+    /// </summary>
+    private IEnumerator waitTillAnimDone()
+    {
 
-    yield return new WaitUntil(() => slash.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("wait") == true);
-    slash.SetActive(false);
-}
-//----------------------------------
-/// <summary>
-/// Ons the draw gizmos selected.
-/// </summary>
-private void OnDrawGizmosSelected()
-{
-    Gizmos.color = Color.red;
-    if (AttackDire.y != 0)
-    {
-        Gizmos.DrawWireSphere(transform.position + (Vector3.up * AttackDire.y), radis);
+        yield return new WaitUntil(() => slash.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("wait") == true);
+        slash.SetActive(false);
     }
-    else if (AttackDire.x != 0)
+    //----------------------------------
+    /// <summary>
+    /// Ons the draw gizmos selected.
+    /// </summary>
+    private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position + (Vector3.right * AttackDire.x), radis);
-    }
+        Gizmos.color = Color.red;
+        if (AttackDire.y != 0)
+        {
+            Gizmos.DrawWireSphere(transform.position + (Vector3.up * AttackDire.y), radis);
+        }
+        else if (AttackDire.x != 0)
+        {
+            Gizmos.DrawWireSphere(transform.position + (Vector3.right * AttackDire.x), radis);
+        }
 
-}
+    }
     private void OnEnable()
     {
         control.Enable();

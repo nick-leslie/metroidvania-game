@@ -23,7 +23,7 @@ public class fallRespawnPos : MonoBehaviour
     void Update()
     {
          ray = Physics2D.Raycast(transform.position, -Vector3.up, groundDis,whatTOhit);
-        if (player.GetComponent<Jump>().IsGrounded == false)
+        if (player.GetComponent<CharicterControlerBace>().colinfo.bellow == false)
         {
             transform.position = lastSafePos + Vector3.up;
             transform.parent = null; 

@@ -203,10 +203,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -464,10 +464,10 @@ RectTransform:
   m_Father: {fileID: 679496816}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 127}
-  m_SizeDelta: {x: 563.2, y: 105.55}
+  m_AnchorMin: {x: 0.29065192, y: 0.5465612}
+  m_AnchorMax: {x: 0.7146076, y: 0.7806161}
+  m_AnchoredPosition: {x: -4, y: -17}
+  m_SizeDelta: {x: -86.79999, y: -116.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354024289
 MonoBehaviour:
@@ -877,10 +877,10 @@ RectTransform:
   m_Father: {fileID: 679496816}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -86}
-  m_SizeDelta: {x: 563.2, y: 105.6}
+  m_AnchorMin: {x: 0.30569622, y: 0.32483545}
+  m_AnchorMax: {x: 0.69630384, y: 0.49367088}
+  m_AnchoredPosition: {x: -1.5, y: 0}
+  m_SizeDelta: {x: -35.799988, y: -54.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &612082738
 MonoBehaviour:
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4969393755019360913}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909319069}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08cba9414f4274689a81de5eab2ebbea, type: 3}
@@ -1475,32 +1475,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &909319069 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4969393754881720882, guid: 0a6cd0b63b248438db59afe71d9a1995,
-    type: 3}
-  m_PrefabInstance: {fileID: 4969393755019360913}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &909319072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909319069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d369cbf3f81b4b0ea45b69a9e378a74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashDistence: 30
-  dashTime: 0.2
-  CoolDown: 0.8
-  whatToCollideWith:
-    serializedVersion: 2
-    m_Bits: 23
-  HitBoxSize: {x: 3.06, y: 5.94}
-  Damage: 2
 --- !u!4 &909319079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969393756570804926, guid: 0a6cd0b63b248438db59afe71d9a1995,
@@ -2323,10 +2297,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2462,6 +2436,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 303096991903158740, guid: 4d854e041d4424d2e8f1aad287cf8547,
+        type: 3}
+      propertyPath: offset.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 303096991903158740, guid: 4d854e041d4424d2e8f1aad287cf8547,
+        type: 3}
+      propertyPath: smoothTime
+      value: 0.125
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d854e041d4424d2e8f1aad287cf8547, type: 3}
 --- !u!1001 &4969393755019360913
@@ -2471,6 +2455,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: jumpDeteionRad
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ground.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fastFallToggle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: jumpHeight
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: timeToJumpApex
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: canJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: timeTillFall
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4969393754881720882, guid: 0a6cd0b63b248438db59afe71d9a1995,
         type: 3}
       propertyPath: m_Name
@@ -2536,6 +2552,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720893, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4969393754881720884, guid: 0a6cd0b63b248438db59afe71d9a1995,
         type: 3}
       propertyPath: filltime
@@ -2551,6 +2572,85 @@ PrefabInstance:
       propertyPath: whatToCollideWith.m_Bits
       value: 55
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4969393754881720886, guid: 0a6cd0b63b248438db59afe71d9a1995, type: 3}
+    - target: {fileID: 4969393756933267906, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720889, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: whattohit.m_Bits
+      value: 1536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720889, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: forceAplydTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720889, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: force
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720889, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: canatack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720892, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720892, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720895, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720895, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969393754881720895, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983307926225402735, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: whatToCol.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212314667941811242, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212314667941811242, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212314667941811242, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: timeToJumpApex
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212314667941811242, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: maxJumpHight
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212314667941811242, guid: 0a6cd0b63b248438db59afe71d9a1995,
+        type: 3}
+      propertyPath: minJumpHeight
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a6cd0b63b248438db59afe71d9a1995, type: 3}

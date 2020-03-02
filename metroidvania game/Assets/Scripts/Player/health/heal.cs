@@ -10,7 +10,7 @@ public class heal : MonoBehaviour
     private RectTransform insidecircalRectTransform;
     private RectTransform shrinkingcircalRectTransform;
     private GameObject player;
-    private bool healing = false;
+    public bool healing = false;
     private HealthMainiger hp;
     [SerializeField]
     private float shrinkSpeedMod;
@@ -21,7 +21,7 @@ public class heal : MonoBehaviour
     private void Awake()
     {
         control = new PlayerControls();
-        control.controls.heal.performed += Heal_Performed;;
+        control.controls.heal.performed += Heal_Performed;
 
     }
 
@@ -82,10 +82,10 @@ public class heal : MonoBehaviour
     {
         if (state == true)
         {
-            player.GetComponent<Movement>().enabled = true;
-            player.GetComponent<Jump>().enabled = true;
+            player.GetComponent<Player>().enabled = true;
             insidecercal.GetComponent<Image>().enabled = false;
             shrinkingcircal.GetComponent<Image>().enabled = false;
+            player.GetComponent<Attack>().enabled = true;
             shrinkingcircal.GetComponent<circalShrinking>().enabled = false;
             shrinkingcircalRectTransform.sizeDelta = gameObject.GetComponent<circalShrinking>().startsize;
             shrinkingcircal.GetComponent<circalShrinking>().shrickSpeed = shrinkingcircal.GetComponent<circalShrinking>().DefaltSpeed; ;
@@ -97,8 +97,8 @@ public class heal : MonoBehaviour
             insidecercal.GetComponent<Image>().enabled = true;
             shrinkingcircal.GetComponent<Image>().enabled = true;
             shrinkingcircal.GetComponent<circalShrinking>().enabled = true;
-            player.GetComponent<Movement>().enabled = false;
-            player.GetComponent<Jump>().enabled = false;
+            player.GetComponent<Player>().enabled = false;
+            player.GetComponent<Attack>().enabled = false;
             healing = true;
         }
     }
