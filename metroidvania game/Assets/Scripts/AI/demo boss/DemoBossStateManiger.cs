@@ -26,6 +26,7 @@ public class DemoBossStateManiger : MonoBehaviour
     private LayerMask lazerThingsToHit;
     [SerializeField]
     private int LazerTimeInState;
+    private bool rotOverride;
     //----------------------------------------------
     //----------------------------------------------
     // handline homming balls
@@ -34,6 +35,9 @@ public class DemoBossStateManiger : MonoBehaviour
     public int MaxballAmount;
     public int MinBallAmount;
     public int chanceToSpawn;
+    public int timeInBallState;
+    [SerializeField]
+    private int amount;
     void Start()
     {
         int children = transform.childCount;
@@ -61,14 +65,18 @@ public class DemoBossStateManiger : MonoBehaviour
                 Handlelazers();
                 break;
             case states.homingBalls:
+                HandleHoming();
                 break;
             case states.weakState:
                 break;
         }
     }
-    private void Handlelazers() 
+    private void Handlelazers()
     {
-        transform.Rotate(new Vector3(0,0,1) * (rotationRate * Time.deltaTime));
+        if (rotOverride == false)
+        { 
+        transform.Rotate(new Vector3(0, 0, 1) * (rotationRate * Time.deltaTime));
+        }
         for (int i = 0; i < spawnPositions.Length; i++)
         {
             Vector3 dire = spawnPositions[i].transform.position - transform.position;
@@ -89,7 +97,6 @@ public class DemoBossStateManiger : MonoBehaviour
     }
     private void HandleHoming()
     {
-        int amount = 0;
         for (int i = 0; i < spawnPositions.Length; i++)
         {
             float chance = Random.Range(1, 100);
@@ -107,6 +114,10 @@ public class DemoBossStateManiger : MonoBehaviour
                 amount++;
             }
         }
+        if (corouteneManiger == false)
+        {
+            StartCoroutine(SwitchStates(timeInBallState));
+        }
     }
     private void HandleWeak()
     {
@@ -116,18 +127,25 @@ public class DemoBossStateManiger : MonoBehaviour
     {
         int TimeLeft = 0;
         corouteneManiger = true;
+        Quaternion myQuat = Quaternion.Euler(transform.localEulerAngles);
+        Quaternion targetQuat = new Quaternion(0, 0, 0, 1);
+        Debug.Log(TimeLeft);
         while (TimeLeft<=TimeInState)
         {
             yield return new WaitForSeconds(1);
             TimeLeft++;
         }
-        while (transform.rotation != new Quaternion(0, 0, 0,1)) 
+        Debug.Log("entering rotation phase");
+        rotOverride = true;
+        while (myQuat!= targetQuat) 
         {
-            transform.Rotate(new Vector3(0, 0, 1) * (rotationRate * Time.deltaTime));
-            yield return new WaitForEndOfFrame();
+            transform.localRotation = Quaternion.RotateTowards(myQuat, targetQuat, rotationRate * Time.deltaTime);
+            yield return new WaitForSeconds(1f);
+            myQuat= Quaternion.Euler(transform.localEulerAngles);
         }
+        Debug.Log("entering switch statment");
         switch (currentState)
-        {
+        { 
             case states.singleLazer:
                 currentState = states.lazers;
                 break;
@@ -136,7 +154,8 @@ public class DemoBossStateManiger : MonoBehaviour
                 {
                     spawnPositions[i].GetComponent<LineRenderer>().enabled = false;
                 }
-                currentState =states.homingBalls;
+                currentState=states.homingBalls;
+                Debug.Log("entering other state");
                 break;
             case states.homingBalls:
                 currentState = states.weakState;
@@ -145,6 +164,7 @@ public class DemoBossStateManiger : MonoBehaviour
                 currentState = states.singleLazer;
                 break;
         }
+        rotOverride = false;
         corouteneManiger = false;
     }
 }

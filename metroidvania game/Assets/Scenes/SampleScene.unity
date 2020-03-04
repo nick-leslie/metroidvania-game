@@ -468,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86571505}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710635, w: -0.70710725}
-  m_LocalPosition: {x: 31.7, y: 55.5, z: 0}
+  m_LocalPosition: {x: 42.2, y: 54.9, z: 0}
   m_LocalScale: {x: 68.667885, y: 2.434033, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6318,8 +6318,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701478552}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710635, w: -0.70710725}
-  m_LocalPosition: {x: 92.7, y: 55.2, z: 0}
-  m_LocalScale: {x: 68.667885, y: 2.434033, z: 1}
+  m_LocalPosition: {x: 87.5, y: 55.3, z: 0}
+  m_LocalScale: {x: 68.667885, y: 2.8478184, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 26
@@ -6363,7 +6363,13 @@ MonoBehaviour:
   lazerThingsToHit:
     serializedVersion: 2
     m_Bits: 4294967295
-  LazerTimeInState: 30
+  LazerTimeInState: 5
+  balls: {fileID: 2389533638050089757, guid: 8c48651fa455d41f99caa25312525e1b, type: 3}
+  MaxballAmount: 5
+  MinBallAmount: 3
+  chanceToSpawn: 50
+  timeInBallState: 0
+  amount: 0
 --- !u!212 &1705594715
 SpriteRenderer:
   m_ObjectHideFlags: 0
